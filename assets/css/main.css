@@ -11,6 +11,8 @@
     /* overflow-x: hidden; */
     color: #efefef #eeeeee #ffffff #f9f4ed #f0f4ff #cc6666 #444444 #00a8ff #273c75;
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 *:focus {
   outline: none;
@@ -269,3 +271,10 @@ i {
         display: none;
     }
 }
+
+
+/* @media (hover: none) {
+    *:hover {
+        filter: none;
+    }
+} */
