@@ -87,7 +87,7 @@ nav {
 h2 {
     color: #273c75;
 }
-p {
+.paragraph {
     text-indent: 0.8rem;
     font-size: 18px;
 }
@@ -124,18 +124,28 @@ p {
 }
 .profile-grid img {
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     border-radius: 12px;
     justify-self: center;
     box-shadow: 0 3px 10px rgba(0,0,0,0.5);
 }
 .profile-grid ul {
     list-style: none;
-    padding-left: 3.5rem;
+    padding-left: 3rem;
     line-height: 2;
 }
 .profile-grid li strong {
     color: #273c75;
+}
+.profile-grid i {
+    margin-top: 1rem;
+    margin-right: 1rem;
+    color: #273c75;
+    font-size: 25px;
+    transition: color 0.3s ease;
+}
+.profile-grid i:hover {
+    color: #00a8ff;
 }
 
 
@@ -150,14 +160,14 @@ p {
     cursor: pointer;
 }
 .skill-item p {
+    margin: 0 auto;
     background: #00a8ff;
     color: #fff;
+    padding: 0.8rem 0;
     text-align: center;
-    padding: 0.8rem 1rem;
     border-radius: 25px;
-    font-weight: bold;
     box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-    /* transition: transform 0.2s, box-shadow 0.2s; */
+    font-weight: bold;
     transition: all 0.2s ease;
 }
 .skill-item p:hover {
@@ -218,6 +228,9 @@ footer {
     padding: 1.5rem;
     padding-left: 2rem;
     font-size: 0.9rem;
+}
+i {
+    margin-right: 0.5rem;
 }
 
 
