@@ -303,6 +303,10 @@ button {
     font-size: 19px;
     font-weight: bold;
 }
+textarea {
+    min-height: 180px;
+}
+
 
 
 
@@ -460,6 +464,11 @@ i {
         color: #00a8ff;
         background-color: #f0f4ff;
     }
+
+    textarea {
+        resize: none;
+    }
+
 }
 
 
@@ -492,4 +501,9 @@ i {
         color: #00a8ff;
         background-color: #f0f4ff;
     }
+
+    textarea {
+        resize: vertical;
+    }
+
 }
