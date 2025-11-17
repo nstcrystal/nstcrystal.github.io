@@ -236,6 +236,7 @@ h2 {
 }
 
 
+/* Question */
 .question {
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -288,6 +289,7 @@ button {
     width: 70%;
     background-color: #00aaff;
     color: #fff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
     font-weight: bold;
     border: none;
     cursor: pointer;
@@ -332,7 +334,7 @@ i {
 
 .faq {
     display: flex;
-    padding: 0 2rem 1rem 2rem;
+    padding: 0 2rem 0rem 2rem;
     justify-content: flex-end;
     font-size: 20px;
 }
@@ -413,7 +415,7 @@ i {
         position: absolute;
         background-color: #efefef;
         min-width: 300px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        box-shadow: 0 3px 10px rgba(0,0,0,0.3);
         border-radius: 10px;
         z-index: 1;
         top: 3.2rem;
@@ -431,7 +433,7 @@ i {
         border-radius: 10px;
         background-color: #fff;
         text-decoration: none;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
         text-align: center;
     }
     .dropdown:hover .dropdown-content {

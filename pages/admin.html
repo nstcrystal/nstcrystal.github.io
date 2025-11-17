@@ -51,7 +51,6 @@
         if (!q || !a) return alert("Vui lòng nhập đủ câu hỏi và câu trả lời!");
 
         const data = loadData();
-        // data.unshift({ q, a }); // thêm vào đầu danh sách
         data.unshift({ q, a, time: new Date().toLocaleString() });
         saveData(data);
 
@@ -70,8 +69,11 @@
     }
 
     function render() {
-        const data = loadData();
         const list = document.getElementById("list");
+        
+        const data = loadData();
+        // const data = await loadData();
+
         list.innerHTML = "";
 
         data.forEach((item, index) => {
@@ -88,14 +90,14 @@
     render();
 
     function downloadJSON() {
-        const data = loadData(); // lấy dữ liệu hiện tại trong localStorage
+        const data = loadData(); 
         const blob = new Blob([JSON.stringify(data, null, 4)], {
             type: "application/json"
         });
         const url = URL.createObjectURL(blob);
         const a = document.createElement("a");
         a.href = url;
-        a.download = "question.json"; // tên file muốn tải
+        a.download = "question.json";
         a.click();
         URL.revokeObjectURL(url);
     }

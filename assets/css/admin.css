@@ -26,10 +26,13 @@ button {
     border-radius: 8px; 
     cursor:pointer;
 }
-button.delete { 
+.delete { 
     background: #ea2535c0; 
+    width: 7%;
+    margin-left: auto;
+    margin-right: 0;
 }
-button.delete:hover { 
+.delete:hover { 
     background: #ff0015; 
 }
 
