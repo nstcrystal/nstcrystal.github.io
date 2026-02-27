@@ -27,7 +27,7 @@ export function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
-            AJ
+            DUY
           </Link>
 
           {/* Desktop Navigation */}

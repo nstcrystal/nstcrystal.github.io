@@ -31,9 +31,9 @@ export interface Project {
   name: string;
   description: string;
   technologies: string[];
+  imageUrl?: string;
   demoLink?: string;
   githubLink?: string;
-  imageUrl?: string;
 }
 
 export interface BlogPost {
@@ -42,4 +42,5 @@ export interface BlogPost {
   content: string;
   createdAt: string;
   updatedAt?: string;
+  tags?: string[];
 }

@@ -1,16 +1,19 @@
 import { Outlet } from 'react-router';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
+import { ScrollToTop } from './ScrollToTop';
 
 /**
- * Layout component that wraps all pages
- * Provides consistent navigation and footer across the application
+ * Layout Component
+ * Wraps all pages with consistent navigation and footer
+ * Includes ScrollToTop for smooth navigation behavior
  */
 export function Layout() {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50">
+    <div className="min-h-screen flex flex-col">
+      <ScrollToTop />
       <Navbar />
-      <main className="flex-1">
+      <main className="flex-grow">
         <Outlet />
       </main>
       <Footer />

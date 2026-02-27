@@ -1,5 +1,5 @@
-import { RouterProvider } from "react-router";
-import { router } from "./routes";
+import { RouterProvider } from 'react-router';
+import { router } from './routes';
 
 /**
  * Main App Component
