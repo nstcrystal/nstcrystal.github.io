@@ -12,7 +12,7 @@ export const personalInfo: PersonalInfo = {
   skills: [
     {
       category: "Frontend",
-      items: ["React", "TypeScript", "Tailwind CSS", "HTML", "CSS", "JavaScript"]
+      items: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Tailwind CSS", ]
     },
     {
       category: "Backend",
@@ -27,11 +27,10 @@ export const personalInfo: PersonalInfo = {
     {
       institution: "Hue University of Sciences",
       degree: "Information technology students",
-      period: "2024 - 2028",
+      period: "2024 - ____",
       description: "Focused on web development, and data structures"
     }
   ],
   email: "nstcrystal@gmail.com",
   github: "https://github.com/nstcrystal",
-  // linkedin: "https://linkedin.com"
 };

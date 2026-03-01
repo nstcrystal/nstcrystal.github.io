@@ -15,6 +15,7 @@ export function Navbar() {
     { path: '/about', label: 'About' },
     { path: '/projects', label: 'Projects' },
     { path: '/blog', label: 'Blog' },
+    { path: '/contact', label: 'Contact' },
   ];
 
   const isActive = (path: string) => {
@@ -27,7 +28,7 @@ export function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
-            DUY
+            Duy
           </Link>
 
           {/* Desktop Navigation */}

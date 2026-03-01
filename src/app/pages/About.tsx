@@ -5,7 +5,7 @@ import { PageTransition } from '../components/PageTransition';
 import { SkillCard } from '../components/SkillCard';
 import { TimelineItem } from '../components/TimelineItem';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
-// import profileImageUrl from '../../../public/avatar.png'
+import { profileAvatar } from '../../assets/images/';
 
 /**
  * Enhanced About Page Component
@@ -25,8 +25,6 @@ import { ImageWithFallback } from '../components/figma/ImageWithFallback';
  * - Professional yet approachable
  */
 export function About() {
-  const profileImageUrl = "";
-
   return (
     <PageTransition>
       <div className="py-12 px-4 sm:px-6 lg:px-8">
@@ -48,7 +46,7 @@ export function About() {
               <div className="relative">
                 <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white shadow-xl mx-auto">
                   <ImageWithFallback
-                    src={profileImageUrl}
+                    src={profileAvatar}
                     alt={personalInfo.name}
                     className="w-full h-full object-cover"
                   />

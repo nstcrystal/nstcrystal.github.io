@@ -24,16 +24,39 @@ export const blogPosts: BlogPost[] = [
     id: "1",
     title: "Hello",
     content: `
-# Xin Chào !!!
+# Xin chào !!!
 
-Đây là nơi tôi đăng các Blog 
+Đây là nơi tôi đăng các Blog của riêng mình
 
-> **Tôi đang thử tạo ra trang web cho riêng mình**
+---
+
+Thật ra thì cũng không có gì nhiều đâu nhưng mà cứ đăng cho nó \`sinh động\`
+
+Và cũng cho những ai trong \`tương lai\` có tò mò mà vào đây đọc nhưng bài Post này 
+
+---
+
+> Nếu có gì muốn nhắn gửi đến tôi thì hãy ghé qua phần \`Contact\` nhé.
+  À trang \`Contact\` chỉ mới có giao diện thôi, tôi chưa thêm ~~chức năng~~ cho nó 
 
 
     `,
-    // createdAt: "2026-02-20T10:00:00Z",
-    createdAt: "2026-02-25",
-    tags: ["Web"],
+    createdAt: "2026-02-20T10:00:00Z",
+    tags: ["Life"],
   },
+  {
+    id: "2",
+    title: "Test",
+    content: `
+
+Tôi đang test trang này có hoạt động đúng cách không
+
+\`\`\`python
+print("hello world")
+\`\`\`
+      `,
+    createdAt: "2026-02-10T09:15:00Z",
+    tags: ["Life"],
+  },
+ 
 ];
