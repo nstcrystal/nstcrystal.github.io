@@ -5,7 +5,7 @@ import { PageTransition } from '../components/PageTransition';
 import { SkillCard } from '../components/SkillCard';
 import { TimelineItem } from '../components/TimelineItem';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
-import { profileAvatar } from '../../assets/images/';
+import { profileAvatar } from '@/assets/images';
 
 /**
  * Enhanced About Page Component

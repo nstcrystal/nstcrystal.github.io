@@ -24,6 +24,10 @@ export interface PersonalInfo {
   email?: string;
   github?: string;
   linkedin?: string;
+  facebook?: string;
+  youtube?: string;
+  instagram?: string;
+  twitter?: string;
 }
 
 export interface Project {

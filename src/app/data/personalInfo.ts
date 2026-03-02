@@ -33,4 +33,9 @@ export const personalInfo: PersonalInfo = {
   ],
   email: "nstcrystal@gmail.com",
   github: "https://github.com/nstcrystal",
+  // linkedin: "https://linkedin.com/",
+  facebook: "https://www.facebook.com/nst.crystal.1",
+  youtube: "https://www.youtube.com/@nstcrystal9349",
+  // instagram: "https://www.instagram.com/crystal.duy/",
+  // twitter: "https://twitter.com/",
 };

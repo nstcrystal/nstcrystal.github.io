@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail, Facebook, Youtube, Instagram, Twitter } from 'lucide-react';
 import { personalInfo } from '../data/personalInfo';
 
 /**
@@ -36,13 +36,16 @@ export function Footer() {
               <li>
                 <a href="/blog" className="hover:text-white transition-colors">Blog</a>
               </li>
+              <li>
+                <a href="/contact" className="hover:text-white transition-colors">Contact</a>
+              </li>
             </ul>
           </div>
 
           {/* Social Links */}
           <div>
             <h3 className="text-white text-lg font-semibold mb-4">Connect</h3>
-            <div className="flex space-x-4">
+            <div className="flex flex-wrap gap-4">
               {personalInfo.github && (
                 <a
                   href={personalInfo.github}
@@ -63,6 +66,50 @@ export function Footer() {
                   aria-label="LinkedIn"
                 >
                   <Linkedin size={20} />
+                </a>
+              )}
+              {personalInfo.facebook && (
+                <a
+                  href={personalInfo.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                  aria-label="Facebook"
+                >
+                  <Facebook size={20} />
+                </a>
+              )}
+              {personalInfo.youtube && (
+                <a
+                  href={personalInfo.youtube}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                  aria-label="YouTube"
+                >
+                  <Youtube size={20} />
+                </a>
+              )}
+              {personalInfo.instagram && (
+                <a
+                  href={personalInfo.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                  aria-label="Instagram"
+                >
+                  <Instagram size={20} />
+                </a>
+              )}
+              {personalInfo.twitter && (
+                <a
+                  href={personalInfo.twitter}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                  aria-label="Twitter"
+                >
+                  <Twitter size={20} />
                 </a>
               )}
               {personalInfo.email && (
