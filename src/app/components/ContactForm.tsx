@@ -343,13 +343,6 @@ export function ContactForm() {
           </>
         )}
       </motion.button>
-
-      {/* Disclaimer */}
-      <p className="text-xs text-gray-500 text-center">
-        This is a frontend demo. Messages are not actually sent.
-        <br />
-        In production, this would connect to a secure backend service.
-      </p>
     </motion.form>
   );
 }
