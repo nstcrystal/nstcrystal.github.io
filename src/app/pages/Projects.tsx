@@ -1,9 +1,9 @@
 import { useState, useMemo } from 'react';
-import { motion, AnimatePresence, LayoutGroup } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 import { projects } from '../data/projects';
 import { ProjectCard } from '../components/ProjectCard';
 import { PageTransition } from '../components/PageTransition';
-import { filterItemVariants, filterContainerVariants } from '../utils/animations';
+import { filterItemVariants } from '../utils/animations';
 
 /**
  * Projects Page Component
@@ -78,31 +78,23 @@ export function Projects() {
           </motion.div>
 
           {/* Projects Grid */}
-          <LayoutGroup>
-            <motion.div
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr"
-              variants={filterContainerVariants}
-              initial="initial"
-              animate="animate"
-              layout
-            >
-              <AnimatePresence mode="popLayout">
-                {filteredProjects.map((project) => (
-                  <motion.div
-                    key={project.id}
-                    variants={filterItemVariants}
-                    initial="initial"
-                    animate="animate"
-                    exit="exit"
-                    layout
-                    className="h-full"
-                  >
-                    <ProjectCard project={project} />
-                  </motion.div>
-                ))}
-              </AnimatePresence>
-            </motion.div>
-          </LayoutGroup>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
+            <AnimatePresence mode="wait">
+              {filteredProjects.map((project, index) => (
+                <motion.div
+                  key={project.id}
+                  variants={filterItemVariants}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  transition={{ delay: index * 0.04 }}
+                  className="h-full"
+                >
+                  <ProjectCard project={project} />
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </div>
 
           {/* No Results Message */}
           {filteredProjects.length === 0 && (

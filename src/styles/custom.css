@@ -80,8 +80,28 @@ body {
 }
 
 /* Markdown content specific styles */
+.markdown-content {
+  width: 100%;
+  max-width: none;
+  line-height: 1.7;
+}
+
+.markdown-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.markdown-content pre {
+  margin: 0;
+}
+
+.markdown-content pre > div {
+  border-radius: 0.5rem !important;
+}
+
+/* Prose fallback for compatibility */
 .prose {
-  max-width: 65ch;
+  max-width: none;
 }
 
 /* Smooth transitions for interactive elements */

@@ -1,9 +1,9 @@
 import { useState, useMemo } from 'react';
-import { motion, AnimatePresence, LayoutGroup } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 import { blogPosts } from '../data/blogPosts';
 import { BlogPostCard } from '../components/BlogPostCard';
 import { PageTransition } from '../components/PageTransition';
-import { filterItemVariants, filterContainerVariants } from '../utils/animations';
+import { filterItemVariants } from '../utils/animations';
 
 /**
  * Blog Page Component - Owner Managed
@@ -90,31 +90,23 @@ export function Blog() {
           )}
 
           {/* Blog Posts Grid */}
-          <LayoutGroup>
-            <motion.div
-              className="grid grid-cols-1 md:grid-cols-2 gap-6"
-              variants={filterContainerVariants}
-              initial="initial"
-              animate="animate"
-              layout
-            >
-              <AnimatePresence mode="popLayout">
-                {filteredPosts.map((post) => (
-                  <motion.div
-                    key={post.id}
-                    variants={filterItemVariants}
-                    initial="initial"
-                    animate="animate"
-                    exit="exit"
-                    layout
-                    className="h-full"
-                  >
-                    <BlogPostCard post={post} />
-                  </motion.div>
-                ))}
-              </AnimatePresence>
-            </motion.div>
-          </LayoutGroup>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <AnimatePresence mode="wait">
+              {filteredPosts.map((post, index) => (
+                <motion.div
+                  key={post.id}
+                  variants={filterItemVariants}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  transition={{ delay: index * 0.04 }}
+                  className="h-full"
+                >
+                  <BlogPostCard post={post} />
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </div>
 
           {/* No Results Message */}
           {filteredPosts.length === 0 && (

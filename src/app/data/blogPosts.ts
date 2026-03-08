@@ -55,22 +55,27 @@ Tôi đang test trang này có hoạt động đúng cách không
 print("hello world")
 \`\`\`
       `,
-    createdAt: "2026-02-10T09:15:00Z",
+    createdAt: "2026-02-22T00:00:00Z",
     tags: ["Life"],
   },
-//   {
-//     id: "3",
-//     title: "Xam lin qua troi oi la toi, cai nay co bi loi gi khong day",
-//     content: `
+  {
+    id: "3",
+    title: "Lazy and Timid",
+    content: `
 
-// Tôi đang test trang này có hoạt động đúng cách không
+Hơn 2 tuần rồi
 
-// \`\`\`python
-// print("hello world")
-// \`\`\`
-//       `,
-//     createdAt: "2026-02-10T09:15:00Z",
-//     tags: ["Xam lin"],
-//   },
+Và tôi vẫn chưa làm cái Sever để chạy cái \`Contact Form\` ở bên trang \`Contact\` :))
+
+## Lười quá và không có thời gian
+
+> Trong vòng tuần sau ~chắc chắn~ sẽ làm
+
+
+      `,
+    createdAt: "2026-03-8T00:00:00Z",
+    tags: ["Life"],
+  },
+
 
 ];

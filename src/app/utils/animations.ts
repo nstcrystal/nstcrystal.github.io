@@ -123,28 +123,34 @@ export const scrollReveal = {
 };
 
 /**
- * Filter item animation variants
- * Used for smooth filtering transitions with AnimatePresence
+ * Simplified filter item animation variants
+ * Clean fade + slide animations without scale transforms
+ * 
+ * Animation behavior:
+ * - Exit: fade out with slight downward movement (0.2s)
+ * - Enter: fade in with upward slide (0.25s)
+ * 
+ * This simplified approach:
+ * - Feels smooth and lightweight
+ * - Avoids jarring scale/bounce effects
+ * - Maintains visual consistency with the site
  */
 export const filterItemVariants = {
   initial: {
     opacity: 0,
-    scale: 0.8,
     y: 20,
   },
   animate: {
     opacity: 1,
-    scale: 1,
     y: 0,
     transition: {
-      duration: 0.3,
+      duration: 0.25,
       ease: 'easeOut',
     },
   },
   exit: {
     opacity: 0,
-    scale: 0.8,
-    y: -10,
+    y: 10,
     transition: {
       duration: 0.2,
       ease: 'easeIn',
@@ -153,21 +159,14 @@ export const filterItemVariants = {
 };
 
 /**
- * Filter container animation
- * Staggers children when filtering
+ * Simplified filter container animation
+ * Minimal stagger for subtle sequential reveal
  */
 export const filterContainerVariants = {
   initial: {},
   animate: {
     transition: {
-      staggerChildren: 0.05,
-      delayChildren: 0.02,
-    },
-  },
-  exit: {
-    transition: {
-      staggerChildren: 0.02,
-      staggerDirection: -1,
+      staggerChildren: 0.04,
     },
   },
 };
