@@ -1,8 +1,7 @@
-import { Calendar, Tag } from 'lucide-react';
+import { Calendar, Tag, ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router';
 import type { BlogPost } from '../types';
-import { cardHover } from '../utils/animations';
 
 interface BlogPostCardProps {
   post: BlogPost;
@@ -11,6 +10,7 @@ interface BlogPostCardProps {
 /**
  * Blog Post Card Component
  * Displays a blog post preview with animated hover effect
+ * Features consistent height, cursor pointer, and enhanced hover interactions
  */
 export function BlogPostCard({ post }: BlogPostCardProps) {
   const formatDate = (dateString: string) => {
@@ -30,13 +30,17 @@ export function BlogPostCard({ post }: BlogPostCardProps) {
 
   return (
     <motion.article
-      className="bg-white rounded-lg shadow-md overflow-hidden"
-      variants={cardHover}
-      initial="rest"
-      whileHover="hover"
+      className="bg-white rounded-lg shadow-md overflow-hidden h-full flex flex-col cursor-pointer"
+      initial={{ scale: 1, y: 0 }}
+      whileHover={{ 
+        scale: 1.02, 
+        y: -4,
+        boxShadow: '0 10px 25px rgba(0,0,0,0.08)',
+        transition: { duration: 0.3, ease: 'easeOut' }
+      }}
     >
-      <Link to={`/blog/${post.id}`} className="block">
-        <div className="p-6">
+      <Link to={`/blog/${post.id}`} className="block flex-1 flex flex-col">
+        <div className="p-6 flex flex-col flex-1">
           <h2 className="text-2xl font-semibold text-gray-900 mb-3 hover:text-blue-600 transition-colors">
             {post.title}
           </h2>
@@ -62,12 +66,13 @@ export function BlogPostCard({ post }: BlogPostCardProps) {
             </div>
           )}
 
-          <p className="text-gray-600 line-clamp-3">
+          <p className="text-gray-600 line-clamp-3 flex-grow">
             {excerpt}...
           </p>
 
-          <div className="mt-4 text-blue-600 font-medium inline-flex items-center group-hover:gap-2 transition-all">
-            Read more →
+          <div className="mt-4 text-blue-600 font-medium inline-flex items-center gap-1 group">
+            Read more 
+            <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
           </div>
         </div>
       </Link>

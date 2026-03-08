@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import { motion } from 'motion/react';
+import { useState, useMemo } from 'react';
+import { motion, AnimatePresence, LayoutGroup } from 'motion/react';
 import { blogPosts } from '../data/blogPosts';
 import { BlogPostCard } from '../components/BlogPostCard';
 import { PageTransition } from '../components/PageTransition';
-import { staggerContainer, staggerItem } from '../utils/animations';
+import { filterItemVariants, filterContainerVariants } from '../utils/animations';
 
 /**
  * Blog Page Component - Owner Managed
@@ -28,11 +28,13 @@ export function Blog() {
     new Set(blogPosts.flatMap((post) => post.tags || []))
   ).sort();
 
-  // Filter posts based on selected tag
-  const filteredPosts =
-    selectedTag === 'All'
-      ? blogPosts
-      : blogPosts.filter((post) => post.tags?.includes(selectedTag));
+  // Sort posts by ID descending (newest first) and filter based on selected tag
+  const filteredPosts = useMemo(() => {
+    const sorted = [...blogPosts].sort((a, b) => Number(b.id) - Number(a.id));
+    return selectedTag === 'All'
+      ? sorted
+      : sorted.filter((post) => post.tags?.includes(selectedTag));
+  }, [selectedTag]);
 
   return (
     <PageTransition>
@@ -62,10 +64,10 @@ export function Blog() {
               <div className="flex flex-wrap gap-2 justify-center">
                 <button
                   onClick={() => setSelectedTag('All')}
-                  className={`px-4 py-2 rounded-lg transition-colors ${
+                  className={`px-4 py-2 rounded-lg cursor-pointer transition-all duration-200 ${
                     selectedTag === 'All'
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'
+                      ? 'bg-blue-600 text-white shadow-md'
+                      : 'bg-white text-gray-700 hover:bg-gray-100 hover:shadow-sm border border-gray-300'
                   }`}
                 >
                   All
@@ -74,10 +76,10 @@ export function Blog() {
                   <button
                     key={tag}
                     onClick={() => setSelectedTag(tag)}
-                    className={`px-4 py-2 rounded-lg transition-colors ${
+                    className={`px-4 py-2 rounded-lg cursor-pointer transition-all duration-200 ${
                       selectedTag === tag
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'
+                        ? 'bg-blue-600 text-white shadow-md'
+                        : 'bg-white text-gray-700 hover:bg-gray-100 hover:shadow-sm border border-gray-300'
                     }`}
                   >
                     {tag}
@@ -88,18 +90,31 @@ export function Blog() {
           )}
 
           {/* Blog Posts Grid */}
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 gap-6"
-            variants={staggerContainer}
-            initial="initial"
-            animate="animate"
-          >
-            {filteredPosts.map((post) => (
-              <motion.div key={post.id} variants={staggerItem}>
-                <BlogPostCard post={post} />
-              </motion.div>
-            ))}
-          </motion.div>
+          <LayoutGroup>
+            <motion.div
+              className="grid grid-cols-1 md:grid-cols-2 gap-6"
+              variants={filterContainerVariants}
+              initial="initial"
+              animate="animate"
+              layout
+            >
+              <AnimatePresence mode="popLayout">
+                {filteredPosts.map((post) => (
+                  <motion.div
+                    key={post.id}
+                    variants={filterItemVariants}
+                    initial="initial"
+                    animate="animate"
+                    exit="exit"
+                    layout
+                    className="h-full"
+                  >
+                    <BlogPostCard post={post} />
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+            </motion.div>
+          </LayoutGroup>
 
           {/* No Results Message */}
           {filteredPosts.length === 0 && (

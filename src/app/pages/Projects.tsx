@@ -1,14 +1,14 @@
-import { useState } from 'react';
-import { motion } from 'motion/react';
+import { useState, useMemo } from 'react';
+import { motion, AnimatePresence, LayoutGroup } from 'motion/react';
 import { projects } from '../data/projects';
 import { ProjectCard } from '../components/ProjectCard';
 import { PageTransition } from '../components/PageTransition';
-import { staggerContainer, staggerItem } from '../utils/animations';
+import { filterItemVariants, filterContainerVariants } from '../utils/animations';
 
 /**
  * Projects Page Component
  * Displays all projects with filtering by technology
- * Enhanced with staggered grid animations
+ * Enhanced with staggered grid animations and smooth filtering
  */
 export function Projects() {
   const [selectedTech, setSelectedTech] = useState<string>('All');
@@ -18,13 +18,13 @@ export function Projects() {
     new Set(projects.flatMap((project) => project.technologies))
   ).sort();
 
-  // Filter projects based on selected technology
-  const filteredProjects =
-    selectedTech === 'All'
-      ? projects
-      : projects.filter((project) =>
-          project.technologies.includes(selectedTech)
-        );
+  // Sort projects by ID descending (newest first) and filter based on selected technology
+  const filteredProjects = useMemo(() => {
+    const sorted = [...projects].sort((a, b) => Number(b.id) - Number(a.id));
+    return selectedTech === 'All'
+      ? sorted
+      : sorted.filter((project) => project.technologies.includes(selectedTech));
+  }, [selectedTech]);
 
   return (
     <PageTransition>
@@ -53,10 +53,10 @@ export function Projects() {
             <div className="flex flex-wrap gap-2 justify-center">
               <button
                 onClick={() => setSelectedTech('All')}
-                className={`px-4 py-2 rounded-lg transition-colors ${
+                className={`px-4 py-2 rounded-lg cursor-pointer transition-all duration-200 ${
                   selectedTech === 'All'
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'
+                    ? 'bg-blue-600 text-white shadow-md'
+                    : 'bg-white text-gray-700 hover:bg-gray-100 hover:shadow-sm border border-gray-300'
                 }`}
               >
                 All
@@ -65,10 +65,10 @@ export function Projects() {
                 <button
                   key={tech}
                   onClick={() => setSelectedTech(tech)}
-                  className={`px-4 py-2 rounded-lg transition-colors ${
+                  className={`px-4 py-2 rounded-lg cursor-pointer transition-all duration-200 ${
                     selectedTech === tech
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'
+                      ? 'bg-blue-600 text-white shadow-md'
+                      : 'bg-white text-gray-700 hover:bg-gray-100 hover:shadow-sm border border-gray-300'
                   }`}
                 >
                   {tech}
@@ -78,18 +78,31 @@ export function Projects() {
           </motion.div>
 
           {/* Projects Grid */}
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-            variants={staggerContainer}
-            initial="initial"
-            animate="animate"
-          >
-            {filteredProjects.map((project) => (
-              <motion.div key={project.id} variants={staggerItem}>
-                <ProjectCard project={project} />
-              </motion.div>
-            ))}
-          </motion.div>
+          <LayoutGroup>
+            <motion.div
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr"
+              variants={filterContainerVariants}
+              initial="initial"
+              animate="animate"
+              layout
+            >
+              <AnimatePresence mode="popLayout">
+                {filteredProjects.map((project) => (
+                  <motion.div
+                    key={project.id}
+                    variants={filterItemVariants}
+                    initial="initial"
+                    animate="animate"
+                    exit="exit"
+                    layout
+                    className="h-full"
+                  >
+                    <ProjectCard project={project} />
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+            </motion.div>
+          </LayoutGroup>
 
           {/* No Results Message */}
           {filteredProjects.length === 0 && (

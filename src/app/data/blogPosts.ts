@@ -58,5 +58,19 @@ print("hello world")
     createdAt: "2026-02-10T09:15:00Z",
     tags: ["Life"],
   },
- 
+//   {
+//     id: "3",
+//     title: "Xam lin qua troi oi la toi, cai nay co bi loi gi khong day",
+//     content: `
+
+// Tôi đang test trang này có hoạt động đúng cách không
+
+// \`\`\`python
+// print("hello world")
+// \`\`\`
+//       `,
+//     createdAt: "2026-02-10T09:15:00Z",
+//     tags: ["Xam lin"],
+//   },
+
 ];

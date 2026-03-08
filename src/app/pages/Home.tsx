@@ -59,14 +59,14 @@ export function Home() {
               <div className="flex justify-center gap-4">
                 <Link
                   to="/projects"
-                  className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center gap-2"
+                  className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-200 inline-flex items-center gap-2 cursor-pointer hover:shadow-lg"
                 >
                   View Projects
                   <ArrowRight size={20} />
                 </Link>
                 <Link
                   to="/about"
-                  className="px-6 py-3 bg-white text-gray-700 rounded-lg hover:bg-gray-100 border border-gray-300 transition-colors"
+                  className="px-6 py-3 bg-white text-gray-700 rounded-lg hover:bg-gray-100 border border-gray-300 transition-all duration-200 cursor-pointer hover:shadow-md"
                 >
                   Learn More
                 </Link>
@@ -88,7 +88,7 @@ export function Home() {
               Explore
             </motion.h2>
             <motion.div
-              className="grid grid-cols-1 md:grid-cols-3 gap-8"
+              className="grid grid-cols-1 md:grid-cols-3 gap-8 auto-rows-fr"
               variants={staggerContainer}
               initial="initial"
               whileInView="animate"
@@ -97,27 +97,35 @@ export function Home() {
               {quickLinks.map((link) => {
                 const Icon = link.icon;
                 return (
-                  <motion.div key={link.to} variants={staggerItem}>
+                  <motion.div key={link.to} variants={staggerItem} className="h-full">
                     <Link
                       to={link.to}
-                      className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden block"
+                      className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden block h-full cursor-pointer"
                     >
-                      <div className={`h-2 bg-gradient-to-r ${link.color}`} />
-                      <div className="p-6">
-                        <div className={`inline-flex p-3 rounded-lg bg-gradient-to-r ${link.color} mb-4`}>
-                          <Icon className="text-white" size={24} />
+                      <motion.div
+                        className="h-full flex flex-col"
+                        whileHover={{ 
+                          y: -4,
+                          transition: { duration: 0.3, ease: 'easeOut' }
+                        }}
+                      >
+                        <div className={`h-2 bg-gradient-to-r ${link.color}`} />
+                        <div className="p-6 flex flex-col flex-1">
+                          <div className={`inline-flex p-3 rounded-lg bg-gradient-to-r ${link.color} mb-4 w-fit`}>
+                            <Icon className="text-white" size={24} />
+                          </div>
+                          <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                            {link.title}
+                          </h3>
+                          <p className="text-gray-600 flex-grow">
+                            {link.description}
+                          </p>
+                          <div className="mt-4 inline-flex items-center text-blue-600 gap-1">
+                            Explore
+                            <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                          </div>
                         </div>
-                        <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                          {link.title}
-                        </h3>
-                        <p className="text-gray-600">
-                          {link.description}
-                        </p>
-                        <div className="mt-4 inline-flex items-center text-blue-600 group-hover:gap-2 transition-all">
-                          Explore
-                          <ArrowRight size={16} className="ml-1 group-hover:ml-0 transition-all" />
-                        </div>
-                      </div>
+                      </motion.div>
                     </Link>
                   </motion.div>
                 );
@@ -143,7 +151,7 @@ export function Home() {
             </p>
             <a
               href={`mailto:${personalInfo.email}`}
-              className="px-8 py-3 bg-white text-gray-900 rounded-lg hover:bg-gray-100 transition-colors inline-block font-medium"
+              className="px-8 py-3 bg-white text-gray-900 rounded-lg hover:bg-gray-100 transition-all duration-200 inline-block font-medium cursor-pointer hover:shadow-lg"
             >
               Get In Touch
             </a>

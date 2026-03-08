@@ -16,23 +16,26 @@ interface ProjectCardProps {
  * - Image overlay effect on hover
  * - Technology badges
  * - Action buttons (Demo, GitHub)
- * - Consistent card height
+ * - Consistent card height with auto equal rows
  * - Fully responsive
+ * - Cursor pointer for better UX
  * 
  * UX Improvements:
  * - Visual hierarchy with image at top
  * - Clear call-to-action buttons
  * - Smooth hover interactions
  * - Technology stack prominently displayed
+ * - Enhanced shadow elevation on hover
  */
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <motion.article
-      className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full"
-      initial={{ scale: 1 }}
+      className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full cursor-pointer"
+      initial={{ scale: 1, y: 0 }}
       whileHover={{ 
-        scale: 1.03, 
-        y: -8,
+        scale: 1.02, 
+        y: -6,
+        boxShadow: '0 12px 30px rgba(0,0,0,0.1)',
         transition: { duration: 0.3, ease: 'easeOut' }
       }}
     >
@@ -96,7 +99,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
               href={project.demoLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
+              className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-200 text-sm font-medium cursor-pointer hover:shadow-md"
             >
               <ExternalLink size={16} />
               Demo
@@ -107,9 +110,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
               href={project.githubLink}
               target="_blank"
               rel="noopener noreferrer"
-              className={`flex items-center justify-center gap-2 px-4 py-2 border-2 border-gray-300 text-gray-700 rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-colors text-sm font-medium ${
-                project.demoLink ? 'flex-1' : 'flex-1'
-              }`}
+              className="flex-1 flex items-center justify-center gap-2 px-4 py-2 border-2 border-gray-300 text-gray-700 rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-all duration-200 text-sm font-medium cursor-pointer"
             >
               <Github size={16} />
               Code

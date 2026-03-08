@@ -121,3 +121,53 @@ export const scrollReveal = {
     margin: '-100px',
   },
 };
+
+/**
+ * Filter item animation variants
+ * Used for smooth filtering transitions with AnimatePresence
+ */
+export const filterItemVariants = {
+  initial: {
+    opacity: 0,
+    scale: 0.8,
+    y: 20,
+  },
+  animate: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: {
+      duration: 0.3,
+      ease: 'easeOut',
+    },
+  },
+  exit: {
+    opacity: 0,
+    scale: 0.8,
+    y: -10,
+    transition: {
+      duration: 0.2,
+      ease: 'easeIn',
+    },
+  },
+};
+
+/**
+ * Filter container animation
+ * Staggers children when filtering
+ */
+export const filterContainerVariants = {
+  initial: {},
+  animate: {
+    transition: {
+      staggerChildren: 0.05,
+      delayChildren: 0.02,
+    },
+  },
+  exit: {
+    transition: {
+      staggerChildren: 0.02,
+      staggerDirection: -1,
+    },
+  },
+};

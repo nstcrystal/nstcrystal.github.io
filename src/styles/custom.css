@@ -89,6 +89,26 @@ a, button {
   transition: all 0.2s ease-in-out;
 }
 
+/* Cursor pointer for clickable elements */
+a, button, [role="button"], .clickable {
+  cursor: pointer;
+}
+
+/* Card hover effect utility class */
+.card-hover {
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Equal height cards in grid */
+.auto-rows-fr {
+  grid-auto-rows: 1fr;
+}
+
 /* Reduce motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
   *,

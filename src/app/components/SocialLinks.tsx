@@ -145,6 +145,7 @@ export function SocialLinks() {
               ${social.hoverColor}
               hover:shadow-lg
               active:scale-95
+              cursor-pointer
             `}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
