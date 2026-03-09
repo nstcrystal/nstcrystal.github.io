@@ -73,7 +73,7 @@ Và tôi vẫn chưa làm cái Sever để chạy cái \`Contact Form\` ở bên
 
 
       `,
-    createdAt: "2026-03-8T00:00:00Z",
+    createdAt: "2026-03-08T00:00:00Z",
     tags: ["Life"],
   },
 
