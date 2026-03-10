@@ -1,10 +1,18 @@
 import avatarImg from './profile/avatar.jpg';
+import homeHeroImg from './profile/home-hero.jpg';
+// import devIllustrationImg from './profile/dev-illustration.jpg';
+import devIllustrationImg from './profile/255631.jpg';
+
 
 import flappy_birdImg from './projects/flappy_bird.jpg';
 
 
 // Profile Images
 export const profileAvatar = avatarImg;
+
+// Page Illustrations
+export const homeHero = homeHeroImg;
+export const devIllustration = devIllustrationImg;
 
 // Project Images
 export const projectImages = {

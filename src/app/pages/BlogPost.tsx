@@ -1,17 +1,35 @@
 import { useParams, Link } from 'react-router';
 import { Calendar, Tag, ArrowLeft } from 'lucide-react';
 import { motion } from 'motion/react';
-import { blogPosts } from '../data/blogPosts';
+import { useMemo } from 'react';
+import { getBlogPostBySlug, getBlogPostById } from '../utils/blogLoader';
 import { MarkdownContent } from '../components/MarkdownContent';
 import { PageTransition } from '../components/PageTransition';
 
 /**
  * Individual Blog Post Page
  * Displays full blog post content with Markdown rendering
+ * Supports both slug-based and id-based routing
  */
 export function BlogPost() {
   const { id } = useParams<{ id: string }>();
-  const post = blogPosts.find((p) => p.id === id);
+  
+  // Try to find post by slug first, then by id (for backwards compatibility)
+  const post = useMemo(() => {
+    if (!id) return undefined;
+    
+    // First try as slug
+    const bySlug = getBlogPostBySlug(id);
+    if (bySlug) return bySlug;
+    
+    // Then try as numeric id
+    const numId = parseInt(id, 10);
+    if (!isNaN(numId)) {
+      return getBlogPostById(numId);
+    }
+    
+    return undefined;
+  }, [id]);
 
   if (!post) {
     return (
@@ -74,7 +92,7 @@ export function BlogPost() {
             <div className="flex items-center gap-4 text-gray-600 mb-6">
               <div className="flex items-center gap-2">
                 <Calendar size={18} />
-                <span>{formatDate(post.createdAt)}</span>
+                <span>{formatDate(post.date)}</span>
               </div>
             </div>
 
@@ -92,6 +110,22 @@ export function BlogPost() {
               </div>
             )}
           </motion.header>
+
+          {/* Cover Image */}
+          {post.coverImage && (
+            <motion.div
+              className="mb-8 rounded-lg overflow-hidden shadow-md"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15 }}
+            >
+              <img
+                src={post.coverImage}
+                alt={post.title}
+                className="w-full h-auto"
+              />
+            </motion.div>
+          )}
 
           {/* Post Content */}
           <motion.div

@@ -5,7 +5,7 @@ import { PageTransition } from '../components/PageTransition';
 import { SkillCard } from '../components/SkillCard';
 import { TimelineItem } from '../components/TimelineItem';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
-import { profileAvatar } from '@/assets/images';
+import { profileAvatar, devIllustration } from '@/assets/images';
 
 /**
  * Enhanced About Page Component
@@ -67,7 +67,7 @@ export function About() {
             </p>
           </motion.div>
 
-          {/* Bio Section */}
+          {/* Bio Section with Illustration */}
           <motion.section
             className="bg-white rounded-2xl shadow-md p-8 md:p-10 mb-12"
             initial={{ opacity: 0, y: 30 }}
@@ -75,13 +75,30 @@ export function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-              <div className="w-2 h-8 bg-blue-600 rounded-full" />
-              My Story
-            </h2>
-            <p className="text-gray-700 leading-relaxed text-lg">
-              {personalInfo.fullBio}
-            </p>
+            <div className="flex flex-col lg:flex-row gap-8 items-center">
+              <div className="flex-1">
+                <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                  <div className="w-2 h-8 bg-blue-600 rounded-full" />
+                  My Story
+                </h2>
+                <p className="text-gray-700 leading-relaxed text-lg">
+                  {personalInfo.fullBio}
+                </p>
+              </div>
+              <motion.div
+                className="lg:w-1/3 flex-shrink-0"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
+                <img
+                  src={devIllustration}
+                  alt="Web Development Illustration"
+                  className="w-full max-w-xs mx-auto rounded-xl shadow-md"
+                />
+              </motion.div>
+            </div>
           </motion.section>
 
           {/* Skills Section */}

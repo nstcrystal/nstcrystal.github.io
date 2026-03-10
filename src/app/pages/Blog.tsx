@@ -1,40 +1,39 @@
 import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { blogPosts } from '../data/blogPosts';
+import { loadBlogPosts, getAllTags } from '../utils/blogLoader';
 import { BlogPostCard } from '../components/BlogPostCard';
 import { PageTransition } from '../components/PageTransition';
 import { filterItemVariants } from '../utils/animations';
 
 /**
- * Blog Page Component - Owner Managed
+ * Blog Page Component - Markdown Based
  * 
- * Displays blog posts managed by the website owner through data files.
- * This approach is better for portfolios because:
+ * Displays blog posts loaded from markdown files in /src/content/blog/
  * 
- * 1. Security: No public CRUD endpoints to exploit
- * 2. Performance: No database queries needed
- * 3. SEO: Content is available at build time
- * 4. Version Control: Track changes with Git
- * 5. Simplicity: No backend infrastructure required
- * 6. Cost: Free hosting on static platforms
+ * Benefits of markdown-based blog:
+ * 1. Easy to write - use familiar markdown syntax
+ * 2. Version controlled - track changes with Git
+ * 3. Frontmatter metadata - structured data for each post
+ * 4. No database required - static files
+ * 5. SEO friendly - content available at build time
  * 
- * To add a new post: Edit /src/app/data/blogPosts.ts
+ * To add a new post: Create a .md file in /src/content/blog/
  */
 export function Blog() {
   const [selectedTag, setSelectedTag] = useState<string>('All');
 
-  // Extract unique tags from all posts
-  const allTags = Array.from(
-    new Set(blogPosts.flatMap((post) => post.tags || []))
-  ).sort();
+  // Load all blog posts from markdown files
+  const blogPosts = useMemo(() => loadBlogPosts(), []);
 
-  // Sort posts by ID descending (newest first) and filter based on selected tag
+  // Get all unique tags
+  const allTags = useMemo(() => getAllTags(), []);
+
+  // Filter posts based on selected tag (already sorted by id descending)
   const filteredPosts = useMemo(() => {
-    const sorted = [...blogPosts].sort((a, b) => Number(b.id) - Number(a.id));
     return selectedTag === 'All'
-      ? sorted
-      : sorted.filter((post) => post.tags?.includes(selectedTag));
-  }, [selectedTag]);
+      ? blogPosts
+      : blogPosts.filter((post) => post.tags.includes(selectedTag));
+  }, [selectedTag, blogPosts]);
 
   return (
     <PageTransition>
@@ -94,7 +93,7 @@ export function Blog() {
             <AnimatePresence mode="wait">
               {filteredPosts.map((post, index) => (
                 <motion.div
-                  key={post.id}
+                  key={post.slug}
                   variants={filterItemVariants}
                   initial="initial"
                   animate="animate"

@@ -4,11 +4,12 @@ import { ArrowRight, Code, Briefcase, FileText } from 'lucide-react';
 import { personalInfo } from '../data/personalInfo';
 import { PageTransition } from '../components/PageTransition';
 import { heroVariants, staggerContainer, staggerItem } from '../utils/animations';
+import { homeHero } from '@/assets/images';
 
 /**
  * Home Page Component
  * Landing page with introduction and quick navigation
- * Enhanced with smooth entrance animations
+ * Enhanced with smooth entrance animations and hero illustration
  */
 export function Home() {
   const quickLinks = [
@@ -38,40 +39,60 @@ export function Home() {
   return (
     <PageTransition>
       <div className="min-h-[calc(100vh-4rem)]">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20 px-4 sm:px-6 lg:px-8">
+        {/* Hero Section with Illustration */}
+        <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-16 md:py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div
-              className="text-center"
-              variants={heroVariants}
-              initial="initial"
-              animate="animate"
-            >
-              <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-4">
-                Hi, I'm {personalInfo.name}
-              </h1>
-              <p className="text-xl sm:text-2xl text-gray-700 mb-6">
-                {personalInfo.role}
-              </p>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-                {personalInfo.shortBio}
-              </p>
-              <div className="flex justify-center gap-4">
-                <Link
-                  to="/projects"
-                  className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-200 inline-flex items-center gap-2 cursor-pointer hover:shadow-lg"
-                >
-                  View Projects
-                  <ArrowRight size={20} />
-                </Link>
-                <Link
-                  to="/about"
-                  className="px-6 py-3 bg-white text-gray-700 rounded-lg hover:bg-gray-100 border border-gray-300 transition-all duration-200 cursor-pointer hover:shadow-md"
-                >
-                  Learn More
-                </Link>
-              </div>
-            </motion.div>
+            <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+              {/* Text Content */}
+              <motion.div
+                className="flex-1 text-center lg:text-left"
+                variants={heroVariants}
+                initial="initial"
+                animate="animate"
+              >
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
+                  Hi, I'm {personalInfo.name}
+                </h1>
+                <p className="text-xl sm:text-2xl text-gray-700 mb-6">
+                  {personalInfo.role}
+                </p>
+                <p className="text-lg text-gray-600 max-w-xl mx-auto lg:mx-0 mb-8">
+                  {personalInfo.shortBio}
+                </p>
+                <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                  <Link
+                    to="/projects"
+                    className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-200 inline-flex items-center justify-center gap-2 cursor-pointer hover:shadow-lg"
+                  >
+                    View Projects
+                    <ArrowRight size={20} />
+                  </Link>
+                  <Link
+                    to="/about"
+                    className="px-6 py-3 bg-white text-gray-700 rounded-lg hover:bg-gray-100 border border-gray-300 transition-all duration-200 cursor-pointer hover:shadow-md text-center"
+                  >
+                    Learn More
+                  </Link>
+                </div>
+              </motion.div>
+
+              {/* Hero Illustration */}
+              <motion.div
+                className="flex-1 max-w-lg lg:max-w-xl"
+                initial={{ opacity: 0, x: 50, scale: 0.95 }}
+                animate={{ opacity: 1, x: 0, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+              >
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-indigo-400/20 rounded-2xl blur-xl" />
+                  <img
+                    src={homeHero}
+                    alt="Web Development Illustration"
+                    className="relative rounded-2xl shadow-xl w-full h-auto"
+                  />
+                </div>
+              </motion.div>
+            </div>
           </div>
         </section>
 
