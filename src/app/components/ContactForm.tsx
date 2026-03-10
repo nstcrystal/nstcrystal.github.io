@@ -1,7 +1,13 @@
-import { useState, useRef, useEffect, FormEvent, ChangeEvent } from 'react';
-import { motion } from 'motion/react';
-import { User, MessageSquare, Send, CheckCircle, AlertCircle } from 'lucide-react';
-import { InputField } from './InputField';
+import { useState, useRef, useEffect, FormEvent, ChangeEvent } from "react";
+import { motion } from "motion/react";
+import {
+  User,
+  MessageSquare,
+  Send,
+  CheckCircle,
+  AlertCircle,
+} from "lucide-react";
+import { InputField } from "./InputField";
 
 /**
  * Contact Form Data Type (Simplified)
@@ -19,27 +25,11 @@ interface FormErrors {
   message?: string;
 }
 
-/**
- * Contact Form Component (Simplified)
- * 
- * Features:
- * - Name and Message fields only (email removed)
- * - Auto-resizing textarea
- * - Field validation (required fields + length)
- * - Loading state during submission
- * - Success/error feedback messages
- * - Smooth animations
- * - Fully responsive
- * - Accessible
- * 
- * Note: This is a frontend-only implementation.
- * Form submission is simulated with setTimeout.
- */
 export function ContactForm() {
   // Form state
   const [formData, setFormData] = useState<ContactFormData>({
-    name: '',
-    message: '',
+    name: "",
+    message: "",
   });
 
   // Validation errors
@@ -47,7 +37,9 @@ export function ContactForm() {
 
   // Submission states
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
   // Textarea ref for auto-resize
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -60,8 +52,8 @@ export function ContactForm() {
     const textarea = textareaRef.current;
     if (textarea) {
       // Reset height to auto to get the correct scrollHeight
-      textarea.style.height = 'auto';
-      
+      textarea.style.height = "auto";
+
       // Set height to scrollHeight (content height)
       textarea.style.height = `${textarea.scrollHeight}px`;
     }
@@ -76,18 +68,18 @@ export function ContactForm() {
 
     // Validate name
     if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
+      newErrors.name = "Name is required";
     } else if (formData.name.trim().length < 2) {
-      newErrors.name = 'Name must be at least 2 characters';
+      newErrors.name = "Name must be at least 2 characters";
     }
 
     // Validate message
     if (!formData.message.trim()) {
-      newErrors.message = 'Message is required';
+      newErrors.message = "Message is required";
     } else if (formData.message.trim().length < 10) {
-      newErrors.message = 'Message must be at least 10 characters';
+      newErrors.message = "Message must be at least 10 characters";
     } else if (formData.message.trim().length > 1000) {
-      newErrors.message = 'Message must be less than 1000 characters';
+      newErrors.message = "Message must be less than 1000 characters";
     }
 
     setErrors(newErrors);
@@ -98,17 +90,36 @@ export function ContactForm() {
    * Simulate form submission
    * In production, this would be an actual API call
    */
-  const simulateSubmission = async (): Promise<void> => {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        // Simulate success (90% of the time)
-        if (Math.random() > 0.1) {
-          resolve();
-        } else {
-          reject(new Error('Simulated network error'));
-        }
-      }, 2000); // 2 second delay to simulate network request
+  // const simulateSubmission = async (): Promise<void> => {
+  //   return new Promise((resolve, reject) => {
+  //     setTimeout(() => {
+  //       // Simulate success (90% of the time)
+  //       if (Math.random() > 0.1) {
+  //         resolve();
+  //       } else {
+  //         reject(new Error("Simulated network error"));
+  //       }
+  //     }, 2000); // 2 second delay to simulate network request
+  //   });
+  // };
+
+  const sendMessage = async (data: ContactFormData) => {
+
+    const response = await fetch("https://webhook-discord-qtkh.onrender.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
     });
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      throw new Error(result.message || "API error");
+    }
+
+    return result;
   };
 
   /**
@@ -117,44 +128,37 @@ export function ContactForm() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Reset previous status
-    setSubmitStatus('idle');
+    setSubmitStatus("idle");
 
-    // Validate form
     if (!validateForm()) {
       return;
     }
 
-    // Start submission
     setIsSubmitting(true);
 
     try {
-      // Simulate submission (replace with real API call)
-      await simulateSubmission();
+      await sendMessage(formData);
 
-      // Success
-      setSubmitStatus('success');
-      
-      // Reset form
+      setSubmitStatus("success");
+
       setFormData({
-        name: '',
-        message: '',
+        name: "",
+        message: "",
       });
 
-      // Reset success message after 5 seconds
       setTimeout(() => {
-        setSubmitStatus('idle');
+        setSubmitStatus("idle");
       }, 5000);
 
+      // console.log("success");
     } catch (error) {
-      // Error
-      setSubmitStatus('error');
-      
-      // Reset error message after 5 seconds
+      setSubmitStatus("error");
+
       setTimeout(() => {
-        setSubmitStatus('idle');
+        setSubmitStatus("idle");
       }, 5000);
 
+      // console.log("error");
     } finally {
       setIsSubmitting(false);
     }
@@ -164,14 +168,14 @@ export function ContactForm() {
    * Handle name input change
    */
   const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       name: e.target.value,
     }));
 
     // Clear error for name when user starts typing
     if (errors.name) {
-      setErrors(prev => ({
+      setErrors((prev) => ({
         ...prev,
         name: undefined,
       }));
@@ -182,14 +186,14 @@ export function ContactForm() {
    * Handle message textarea change
    */
   const handleMessageChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       message: e.target.value,
     }));
 
     // Clear error for message when user starts typing
     if (errors.message) {
-      setErrors(prev => ({
+      setErrors((prev) => ({
         ...prev,
         message: undefined,
       }));
@@ -250,11 +254,11 @@ export function ContactForm() {
               resize-none
               overflow-hidden
               min-h-[120px]
-              ${errors.message ? 'border-red-500 focus:ring-red-500' : ''}
-              ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}
+              ${errors.message ? "border-red-500 focus:ring-red-500" : ""}
+              ${isSubmitting ? "opacity-50 cursor-not-allowed" : ""}
             `}
             style={{
-              maxHeight: '300px', // Maximum height before scrolling
+              maxHeight: "300px", // Maximum height before scrolling
             }}
           />
         </div>
@@ -272,18 +276,18 @@ export function ContactForm() {
           )}
 
           {/* Character Counter */}
-          <p className={`text-xs ${
-            formData.message.length > 1000 
-              ? 'text-red-600' 
-              : 'text-gray-500'
-          }`}>
+          <p
+            className={`text-xs ${
+              formData.message.length > 1000 ? "text-red-600" : "text-gray-500"
+            }`}
+          >
             {formData.message.length}/1000
           </p>
         </div>
       </div>
 
       {/* Success Message */}
-      {submitStatus === 'success' && (
+      {submitStatus === "success" && (
         <motion.div
           className="flex items-center gap-3 p-4 bg-green-50 border border-green-200 rounded-lg"
           initial={{ opacity: 0, scale: 0.95 }}
@@ -292,14 +296,18 @@ export function ContactForm() {
         >
           <CheckCircle className="text-green-600 flex-shrink-0" size={20} />
           <div>
-            <p className="font-medium text-green-900">Message sent successfully!</p>
-            <p className="text-sm text-green-700">Thank you for reaching out. I'll get back to you soon.</p>
+            <p className="font-medium text-green-900">
+              Message sent successfully!
+            </p>
+            <p className="text-sm text-green-700">
+              Thank you for reaching out. I'll get back to you soon.
+            </p>
           </div>
         </motion.div>
       )}
 
       {/* Error Message */}
-      {submitStatus === 'error' && (
+      {submitStatus === "error" && (
         <motion.div
           className="flex items-center gap-3 p-4 bg-red-50 border border-red-200 rounded-lg"
           initial={{ opacity: 0, scale: 0.95 }}
@@ -309,7 +317,9 @@ export function ContactForm() {
           <AlertCircle className="text-red-600 flex-shrink-0" size={20} />
           <div>
             <p className="font-medium text-red-900">Failed to send message</p>
-            <p className="text-sm text-red-700">Please try again or contact me directly via social media.</p>
+            <p className="text-sm text-red-700">
+              Please try again or contact me directly via social media.
+            </p>
           </div>
         </motion.div>
       )}
@@ -323,9 +333,10 @@ export function ContactForm() {
           px-6 py-3 rounded-lg
           font-medium text-white
           transition-all duration-200
-          ${isSubmitting 
-            ? 'bg-gray-400 cursor-not-allowed' 
-            : 'bg-blue-600 hover:bg-blue-700 hover:shadow-lg active:scale-95'
+          ${
+            isSubmitting
+              ? "bg-gray-400 cursor-not-allowed"
+              : "bg-blue-600 hover:bg-blue-700 hover:shadow-lg active:scale-95"
           }
         `}
         whileHover={isSubmitting ? {} : { scale: 1.02 }}
