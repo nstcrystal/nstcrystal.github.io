@@ -105,7 +105,7 @@ export function ContactForm() {
 
   const sendMessage = async (data: ContactFormData) => {
 
-    const response = await fetch("https://webhook-discord-qtkh.onrender.com", {
+    const response = await fetch("https://webhook-discord-qtkh.onrender.com/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
