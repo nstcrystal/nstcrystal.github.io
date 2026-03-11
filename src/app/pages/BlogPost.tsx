@@ -4,12 +4,16 @@ import { motion } from 'motion/react';
 import { useMemo } from 'react';
 import { getBlogPostBySlug, getBlogPostById } from '../utils/blogLoader';
 import { MarkdownContent } from '../components/MarkdownContent';
+import { TableOfContents } from '../components/TableOfContents';
 import { PageTransition } from '../components/PageTransition';
 
 /**
  * Individual Blog Post Page
  * Displays full blog post content with Markdown rendering
- * Supports both slug-based and id-based routing
+ * Features:
+ * - Sidebar Table of Contents on desktop
+ * - Collapsible TOC on mobile
+ * - Supports both slug-based and id-based routing
  */
 export function BlogPost() {
   const { id } = useParams<{ id: string }>();
@@ -62,97 +66,116 @@ export function BlogPost() {
   return (
     <PageTransition>
       <div className="py-12 px-4 sm:px-6 lg:px-8">
-        <article className="max-w-4xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           {/* Back Button */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
+            className="mb-8"
           >
             <Link
               to="/blog"
-              className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 mb-8 transition-colors"
+              className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors"
             >
               <ArrowLeft size={20} />
               Back to Blog
             </Link>
           </motion.div>
 
-          {/* Post Header */}
-          <motion.header
-            className="mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-          >
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              {post.title}
-            </h1>
-
-            <div className="flex items-center gap-4 text-gray-600 mb-6">
-              <div className="flex items-center gap-2">
-                <Calendar size={18} />
-                <span>{formatDate(post.date)}</span>
-              </div>
-            </div>
-
-            {post.tags && post.tags.length > 0 && (
-              <div className="flex flex-wrap gap-2">
-                {post.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="inline-flex items-center gap-1 px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full"
-                  >
-                    <Tag size={14} />
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            )}
-          </motion.header>
-
-          {/* Cover Image */}
-          {post.coverImage && (
-            <motion.div
-              className="mb-8 rounded-lg overflow-hidden shadow-md"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+          {/* Main Layout: TOC Sidebar + Content */}
+          <div className="flex flex-col lg:flex-row gap-8">
+            {/* Table of Contents - Sidebar on desktop, top on mobile */}
+            <motion.aside
+              className="lg:w-64 lg:flex-shrink-0"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.15 }}
             >
-              <img
-                src={post.coverImage}
-                alt={post.title}
-                className="w-full h-auto"
-              />
-            </motion.div>
-          )}
+              <div className="lg:sticky lg:top-24">
+                <TableOfContents content={post.content} />
+              </div>
+            </motion.aside>
 
-          {/* Post Content */}
-          <motion.div
-            className="bg-white rounded-lg shadow-md p-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-          >
-            <MarkdownContent content={post.content} />
-          </motion.div>
+            {/* Main Article Content */}
+            <article className="flex-1 min-w-0">
+              {/* Post Header */}
+              <motion.header
+                className="mb-8"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+              >
+                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                  {post.title}
+                </h1>
 
-          {/* Related Posts / Navigation */}
-          <motion.div
-            className="mt-12 pt-8 border-t border-gray-200"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
-          >
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors"
-            >
-              <ArrowLeft size={20} />
-              View All Posts
-            </Link>
-          </motion.div>
-        </article>
+                <div className="flex items-center gap-4 text-gray-600 mb-6">
+                  <div className="flex items-center gap-2">
+                    <Calendar size={18} />
+                    <span>{formatDate(post.date)}</span>
+                  </div>
+                </div>
+
+                {post.tags && post.tags.length > 0 && (
+                  <div className="flex flex-wrap gap-2">
+                    {post.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="inline-flex items-center gap-1 px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full"
+                      >
+                        <Tag size={14} />
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </motion.header>
+
+              {/* Cover Image */}
+              {post.coverImage && (
+                <motion.div
+                  className="mb-8 rounded-lg overflow-hidden shadow-md"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.15 }}
+                >
+                  <img
+                    src={post.coverImage}
+                    alt={post.title}
+                    className="w-full h-auto"
+                  />
+                </motion.div>
+              )}
+
+              {/* Post Content */}
+              <motion.div
+                className="bg-white rounded-lg shadow-md p-6 md:p-8"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+              >
+                <MarkdownContent content={post.content} slug={post.slug} />
+              </motion.div>
+
+              {/* Related Posts / Navigation */}
+              <motion.div
+                className="mt-12 pt-8 border-t border-gray-200"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3 }}
+              >
+                <Link
+                  to="/blog"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors"
+                >
+                  <ArrowLeft size={20} />
+                  View All Posts
+                </Link>
+              </motion.div>
+            </article>
+          </div>
+        </div>
       </div>
     </PageTransition>
   );

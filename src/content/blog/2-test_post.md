@@ -30,7 +30,7 @@ System.out.print("Hello World");
 ---
 
 
-![Avatar](../../assets/images/profile/avatar.jpg)
+![Avatar](/src/assets/images/profile/255631.jpg)
 
 | Tiêu đề 1 | Tiêu đề 2 |
 | :--- | :--- |
