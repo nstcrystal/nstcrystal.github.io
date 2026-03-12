@@ -41,10 +41,10 @@ export const router = createBrowserRouter([
         path: 'contact',
         Component: Contact,
       },
-      {
-        path: '*',
-        Component: NotFound,
-      },
+      // {
+      //   path: '*',
+      //   Component: NotFound,
+      // },
     ],
   },
 ]);
