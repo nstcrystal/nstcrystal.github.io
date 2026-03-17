@@ -23,7 +23,7 @@ export function BlogPostCard({ post }: BlogPostCardProps) {
     });
   };
 
-  // Use excerpt from frontmatter, or extract first paragraph from content
+  // Use an excerpt from the frontmatter or the first excerpt from the content
   const excerpt = post.excerpt || post.content
     .split('\n')
     .find(line => line.trim() && !line.startsWith('#'))

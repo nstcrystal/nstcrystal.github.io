@@ -69,7 +69,7 @@ const languageDisplayNames: Record<string, string> = {
   sql: 'SQL',
   markdown: 'Markdown',
   md: 'Markdown',
-  text: 'Plain Text',
+  text: 'Text',
 };
 
 /**

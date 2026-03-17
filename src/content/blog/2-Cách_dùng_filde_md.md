@@ -1,5 +1,5 @@
 ---
-id: 4
+id: 2
 title: Cách dùng file .md
 date: 2026-03-11
 tags: [Study]

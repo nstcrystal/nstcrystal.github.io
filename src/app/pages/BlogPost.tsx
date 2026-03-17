@@ -6,6 +6,7 @@ import { getBlogPostBySlug, getBlogPostById } from '../utils/blogLoader';
 import { MarkdownContent } from '../components/MarkdownContent';
 import { TableOfContents } from '../components/TableOfContents';
 import { PageTransition } from '../components/PageTransition';
+import { BackToTopButton } from '../components/BackToTopButton';
 
 /**
  * Individual Blog Post Page
@@ -86,16 +87,17 @@ export function BlogPost() {
           {/* Main Layout: TOC Sidebar + Content */}
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Table of Contents - Sidebar on desktop, top on mobile */}
-            <motion.aside
-              className="lg:w-64 lg:flex-shrink-0"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.15 }}
-            >
-              <div className="lg:sticky lg:top-24">
-                <TableOfContents content={post.content} />
+            <aside className="lg:w-72 lg:flex-shrink-0">
+              <div className="toc-sidebar">
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.15 }}
+                >
+                  <TableOfContents content={post.content} />
+                </motion.div>
               </div>
-            </motion.aside>
+            </aside>
 
             {/* Main Article Content */}
             <article className="flex-1 min-w-0">
@@ -177,6 +179,7 @@ export function BlogPost() {
           </div>
         </div>
       </div>
+      <BackToTopButton />
     </PageTransition>
   );
 }

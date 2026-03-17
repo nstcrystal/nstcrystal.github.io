@@ -1,6 +1,7 @@
-import { useMemo } from 'react';
+import { useMemo, type ComponentPropsWithoutRef } from 'react';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import rehypeSlug from 'rehype-slug';
 import { CodeBlock } from './CodeBlock';
 
 interface MarkdownContentProps {
@@ -9,17 +10,7 @@ interface MarkdownContentProps {
   slug?: string;
 }
 
-/**
- * Generate a slug-style ID from heading text
- */
-function generateHeadingId(text: string): string {
-  return text
-    .toLowerCase()
-    .replace(/[^\w\s-]/g, '')
-    .replace(/\s+/g, '-')
-    .replace(/-+/g, '-')
-    .trim();
-}
+type HeadingProps = ComponentPropsWithoutRef<'h1'>;
 
 /**
  * Resolve image paths for markdown images
@@ -48,8 +39,8 @@ function resolveImagePath(src: string | undefined, slug?: string): string {
   // Remove leading ./ if present
   const cleanPath = src.replace(/^\.\//, '');
   
-  // If slug is provided, resolve to /content/blog/images/{slug}/{image}
-  // Otherwise fall back to /content/blog/images/{image}
+//   If slug is provided, resolve to /content/blog/images/{slug}/{image}
+//   Otherwise return to /content/blog/images/{image}
   if (slug) {
     return `/content/blog/images/${slug}/${cleanPath}`;
   }
@@ -73,10 +64,8 @@ function resolveImagePath(src: string | undefined, slug?: string): string {
 export function MarkdownContent({ content, slug }: MarkdownContentProps) {
   // Memoize the component renderers to avoid recreating on each render
   const components = useMemo(() => ({
-    // Custom heading styles with IDs for TOC navigation
-    h1: ({ children }: { children?: React.ReactNode }) => {
-      const text = String(children);
-      const id = generateHeadingId(text);
+    // Custom title style with ID for TOC navigation
+    h1: ({ children, id }: HeadingProps) => {
       return (
         <h1 
           id={id}
@@ -86,9 +75,7 @@ export function MarkdownContent({ content, slug }: MarkdownContentProps) {
         </h1>
       );
     },
-    h2: ({ children }: { children?: React.ReactNode }) => {
-      const text = String(children);
-      const id = generateHeadingId(text);
+    h2: ({ children, id }: HeadingProps) => {
       return (
         <h2 
           id={id}
@@ -98,9 +85,7 @@ export function MarkdownContent({ content, slug }: MarkdownContentProps) {
         </h2>
       );
     },
-    h3: ({ children }: { children?: React.ReactNode }) => {
-      const text = String(children);
-      const id = generateHeadingId(text);
+    h3: ({ children, id }: HeadingProps) => {
       return (
         <h3 
           id={id}
@@ -110,8 +95,8 @@ export function MarkdownContent({ content, slug }: MarkdownContentProps) {
         </h3>
       );
     },
-    h4: ({ children }: { children?: React.ReactNode }) => (
-      <h4 className="text-lg font-semibold text-gray-900 mt-4 mb-2 leading-snug">
+    h4: ({ children, id }: HeadingProps) => (
+      <h4 id={id} className="text-lg font-semibold text-gray-900 mt-4 mb-2 leading-snug scroll-mt-20">
         {children}
       </h4>
     ),
@@ -237,6 +222,7 @@ export function MarkdownContent({ content, slug }: MarkdownContentProps) {
     <div className="markdown-content w-full max-w-none">
       <Markdown
         remarkPlugins={[remarkGfm]}
+        rehypePlugins={[rehypeSlug]}
         components={components}
       >
         {content}

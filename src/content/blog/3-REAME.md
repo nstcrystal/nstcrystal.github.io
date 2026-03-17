@@ -1,5 +1,5 @@
 ---
-id: 5
+id: 3
 title: README
 date: 2026-03-12
 tags: [Study]
@@ -21,9 +21,7 @@ Visit the website here:
 
 ## 🖼 Preview
 
-![Preview](/src/assets/images/Preview_Markdown.png)
-
-![](/src/assets/images/profile/avatar.jpg)
+![Preview](/src/content/blog/images/Preview_Markdown.png)
 
 ## ⚙️ Tech Stack
 

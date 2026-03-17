@@ -1,40 +1,9 @@
 import { useState, useEffect, useMemo } from 'react';
-import { List } from 'lucide-react';
-
-interface TOCItem {
-  id: string;
-  text: string;
-  level: number;
-}
+import { List, ChevronDown } from 'lucide-react';
+import { extractHeadings } from '../utils/toc';
 
 interface TableOfContentsProps {
   content: string;
-}
-
-/**
- * Extract headings from markdown content
- * Parses h1-h3 headings and generates IDs
- */
-function extractHeadings(content: string): TOCItem[] {
-  const headingRegex = /^(#{1,3})\s+(.+)$/gm;
-  const headings: TOCItem[] = [];
-  let match;
-
-  while ((match = headingRegex.exec(content)) !== null) {
-    const level = match[1].length;
-    const text = match[2].trim();
-    // Generate a slug-style ID from the heading text
-    const id = text
-      .toLowerCase()
-      .replace(/[^\w\s-]/g, '')
-      .replace(/\s+/g, '-')
-      .replace(/-+/g, '-')
-      .trim();
-
-    headings.push({ id, text, level });
-  }
-
-  return headings;
 }
 
 /**
@@ -59,14 +28,17 @@ export function TableOfContents({ content }: TableOfContentsProps) {
 
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveId(entry.target.id);
-          }
-        });
+        const visible = entries.filter((entry) => entry.isIntersecting);
+        if (visible.length === 0) return;
+
+        const topEntry = visible.reduce((closest, entry) =>
+          entry.boundingClientRect.top < closest.boundingClientRect.top ? entry : closest
+        );
+
+        setActiveId(topEntry.target.id);
       },
       {
-        rootMargin: '-80px 0px -80% 0px',
+        rootMargin: '-15% 0px -70% 0px',
         threshold: 0,
       }
     );
@@ -82,6 +54,12 @@ export function TableOfContents({ content }: TableOfContentsProps) {
     return () => observer.disconnect();
   }, [headings]);
 
+  useEffect(() => {
+    if (headings.length > 0) {
+      setActiveId(headings[0].id);
+    }
+  }, [headings]);
+
   const handleClick = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -95,49 +73,53 @@ export function TableOfContents({ content }: TableOfContentsProps) {
   }
 
   return (
-    <nav className="table-of-contents">
+    <nav className="table-of-contents bg-white border border-gray-200 rounded-xl p-4 lg:p-5 shadow-sm">
       {/* Mobile toggle button */}
       <button
         onClick={() => setIsExpanded(!isExpanded)}
-        className="lg:hidden w-full flex items-center justify-between p-4 bg-gray-50 rounded-lg mb-4"
+        className="lg:hidden w-full flex items-center justify-between px-4 py-3 bg-gray-50 rounded-lg border border-gray-200"
         aria-expanded={isExpanded}
+        aria-controls="toc-dropdown"
       >
         <span className="flex items-center gap-2 font-medium text-gray-900">
           <List size={18} />
-          Table of Contents
+          On this page
         </span>
-        <span className="text-gray-500 text-sm">
-          {isExpanded ? 'Hide' : 'Show'}
-        </span>
+        <ChevronDown
+          size={18}
+          className={`text-gray-500 transition-transform ${isExpanded ? 'rotate-180' : 'rotate-0'}`}
+          aria-hidden="true"
+        />
       </button>
 
       {/* TOC list - always visible on desktop, toggleable on mobile */}
-      <div className={`${isExpanded ? 'block' : 'hidden'} lg:block`}>
-        <div className="hidden lg:flex items-center gap-2 mb-4 text-sm font-semibold text-gray-900 uppercase tracking-wider">
-          <List size={16} />
+      <div
+        id="toc-dropdown"
+        className={`toc-dropdown ${isExpanded ? 'open' : ''}`}
+      >
+        <div className="hidden lg:flex items-center gap-2 mb-4 text-xs font-medium text-gray-900 uppercase tracking-wider">
+          <List size={18} />
           On this page
         </div>
-        <ul className="space-y-1">
-          {headings.map(({ id, text, level }) => (
-            <li
-              key={id}
-              style={{ paddingLeft: `${(level - 1) * 12}px` }}
-            >
-              <button
-                onClick={() => handleClick(id)}
-                className={`
-                  w-full text-left py-1.5 px-3 text-sm rounded-md transition-colors
-                  ${activeId === id
-                    ? 'text-blue-600 bg-blue-50 font-medium'
-                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
-                  }
-                `}
+        <div className="toc-scroll toc-mobile-list">
+          <ul className="space-y-1">
+            {headings.map(({ id, text, level }) => (
+              <li
+                key={id}
+                style={{ paddingLeft: `${(level - 1) * 12}px` }}
               >
-                {text}
-              </button>
-            </li>
-          ))}
-        </ul>
+                <button
+                  onClick={() => handleClick(id)}
+                  className={`toc-link ${
+                    activeId === id ? 'active text-blue-600 bg-blue-50' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                  }`}
+                >
+                  {text}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </nav>
   );
