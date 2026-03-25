@@ -21,7 +21,7 @@ Visit the website here:
 
 ## 🖼 Preview
 
-![Preview](/src/content/blog/images/Preview_Markdown.png)
+![Preview](/src/assets/images/blogs/Preview_Markdown.png)
 
 ## ⚙️ Tech Stack
 
