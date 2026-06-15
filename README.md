@@ -1,0 +1,25 @@
+```
+nstcrystal/
+    .nuxt/
+    content/
+        bai-viet-1.md
+        bai-viet-2.md
+    app/
+        assets/
+        components/
+        layouts/
+        pages/
+            index.vue
+            about.vue
+            contact.vue
+            blog/
+                [...slug].vue
+        app.config.ts
+        app.vue
+        error.vue
+    docs/
+    public/
+    nuxt.config.ts
+    package.json
+    README.md
+```
