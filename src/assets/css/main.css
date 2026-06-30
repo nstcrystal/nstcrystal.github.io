@@ -152,10 +152,10 @@
 
     border: 1px solid color-mix(in oklab, white 40%, transparent);
 
-    box-shadow: 0 10px 40px rgb(0 0 0 /0.05);
+    box-shadow: 0 10px 40px rgb(0 0 0 /0.02);
   }
 
   .glass-shadow {
-    box-shadow: 0 8px 30px rgb(0 0 0 / 0.06);
+    box-shadow: 0 8px 30px rgb(0 0 0 / 0.02);
   }
 }
