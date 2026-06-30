@@ -18,29 +18,38 @@
       </RouterLink>
 
       <nav class="flex items-center gap-1 text-sm font-medium">
-        <RouterLink
-          to="/"
-          class="rounded-md px-3 py-2 text-muted-foreground transition-colors hover:text-foreground"
-          active-class="text-foreground"
-          exact-active-class="text-foreground"
-        >
-          Home
+        <!-- Home -->
+        <RouterLink to="/" custom v-slot="{ href, navigate, isExactActive }">
+          <a
+            :href="href"
+            @click="navigate"
+            :class="[
+              'rounded-md px-3 py-2 transition-colors',
+              isExactActive
+                ? 'bg-primary/20 text-foreground'
+                : 'text-muted-foreground hover:bg-primary/10 hover:text-foreground'
+            ]"
+          >
+            Home
+          </a>
         </RouterLink>
 
-        <RouterLink
-          to="/about"
-          class="rounded-md px-3 py-2 text-muted-foreground transition-colors hover:text-foreground"
-          active-class="text-foreground"
-        >
-          About
+        <!-- About -->
+        <RouterLink to="/about" custom v-slot="{ href, navigate, isActive }">
+          <a
+            :href="href"
+            @click="navigate"
+            :class="[
+              'rounded-md px-3 py-2 transition-colors',
+              isActive
+                ? 'bg-primary/20 text-foreground'
+                : 'text-muted-foreground hover:bg-primary/10 hover:text-foreground'
+            ]"
+          >
+            About
+          </a>
         </RouterLink>
       </nav>
     </div>
   </header>
 </template>
-
-<script setup>
-// Không cần import nếu Vue Router đã được cài đặt tự động.
-// Nếu cần thì import:
-// import { RouterLink } from 'vue-router'
-</script>
