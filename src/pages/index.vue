@@ -1,17 +1,19 @@
 <template>
   <section class="relative overflow-hidden">
     <div
-      class="relative mx-auto grid max-w-7xl px-6 gap-10 pb-20 pt-15 md:grid-cols-[1fr_1fr] md:items-center"
+      class="relative mx-auto grid max-w-7xl px-6 gap-10 pb-20 pt-15 md:grid-cols-[1.1fr_1fr] md:items-center"
     >
       <!-- Left Content -->
       <div>
-        <span
-          class="inline-flex items-center rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted-foreground"
-        >
-          Available for freelance
-        </span>
+        <div class="flex justify-center">
+          <span
+            class="mx-auto rounded-full border border-border bg-card px-3 py-1 text-xs font-normal italic text-muted-foreground"
+          >
+            Available for freelance
+          </span>
+        </div>
 
-        <h1 class="mt-6 text-5xl font-bold tracking-tight md:text-7xl text-center">
+        <h1 class="mt-4 text-5xl font-bold tracking-tight md:text-7xl text-center">
           Developer
           <span
             class="bg-clip-text text-transparent"
@@ -27,7 +29,7 @@
           to develop my skills.
         </p>
 
-        <div class="mt-8 flex flex-wrap items-center gap-3">
+        <div class="mt-8 flex justify-center items-center gap-5">
           <RouterLink
             to="/about"
             class="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-1"
@@ -48,15 +50,19 @@
         </div>
       </div>
 
-      <!-- Profile Card -->
+      <!-- Image Card -->
       <div class="relative">
         <div
           aria-hidden="true"
-          class="absolute -inset-2 rounded-3xl opacity-30 blur-2xl"
+          class="absolute -inset-2 rounded-3xl opacity-20 blur-2xl"
           :style="{ background: 'var(--gradient-brand)' }"
         />
 
-        <div class="relative rounded-3xl border border-border bg-card p-6">
+        <div class="relative rounded-3xl border-2 border-border">
+          <img src="../../public/images/Home_Image.jpg" alt="Home_Image" class="rounded-3xl" />
+        </div>
+
+        <!-- <div class="relative rounded-3xl border border-border bg-card p-6">
           <div class="flex items-center gap-4">
             <div
               class="flex h-16 w-16 items-center justify-center rounded-2xl text-2xl font-bold text-primary-foreground"
@@ -101,7 +107,7 @@
               <dd class="mt-1 font-medium">From $80/hr</dd>
             </div>
           </dl>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
