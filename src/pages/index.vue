@@ -58,8 +58,12 @@
           :style="{ background: 'var(--gradient-brand)' }"
         />
 
-        <div class="relative rounded-3xl border-2 border-border">
-          <img src="../../public/images/Home_Image.jpg" alt="Home_Image" class="rounded-3xl" />
+        <div class="relative rounded-3xl">
+          <img
+            src="../../public/images/Home_Image.jpg"
+            alt="Home_Image"
+            class="w-full rounded-3xl border-4 border-border"
+          />
         </div>
 
         <!-- <div class="relative rounded-3xl border border-border bg-card p-6">
