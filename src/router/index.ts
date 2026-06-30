@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../pages/HomePage.vue' 
-import About from '../pages/AboutPage.vue' 
+import Home from '../pages/index.vue'
+import About from '../pages/AboutPage.vue'
 import Article from '../pages/Article.vue'
 import Contact from '../pages/Contact.vue'
 
@@ -27,7 +27,7 @@ const router = createRouter({
       name: 'contact',
       component: Contact,
     },
-  ], 
+  ],
 })
 
 export default router
