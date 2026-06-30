@@ -145,14 +145,14 @@
   }
 
   .glass {
-    background: color-mix(in oklab, var(--background) 80%, transparent);
+    background: color-mix(in oklab, var(--background) 85%, transparent);
 
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
 
-    border: 1px solid color-mix(in oklab, white 20%, transparent);
+    border: 1px solid color-mix(in oklab, white 40%, transparent);
 
-    box-shadow: 0 10px 40px rgb(0 0 0 /0.05);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
   }
 
   .glass-shadow {
