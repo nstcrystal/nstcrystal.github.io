@@ -14,7 +14,7 @@
             boxShadow: 'var(--shadow-brand)',
           }"
         />
-        <span class="text-lg">myportfolio</span>
+        <span class="text-lg">NSTCrystal</span>
       </RouterLink>
 
       <nav class="flex items-center gap-1 text-sm font-medium">
@@ -27,7 +27,7 @@
               'rounded-md px-3 py-2 transition-colors',
               isExactActive
                 ? 'bg-primary/20 text-foreground'
-                : 'text-muted-foreground hover:bg-primary/10 hover:text-foreground'
+                : 'text-muted-foreground hover:bg-primary/5 hover:text-foreground'
             ]"
           >
             Home
@@ -43,10 +43,42 @@
               'rounded-md px-3 py-2 transition-colors',
               isActive
                 ? 'bg-primary/20 text-foreground'
-                : 'text-muted-foreground hover:bg-primary/10 hover:text-foreground'
+                : 'text-muted-foreground hover:bg-primary/5 hover:text-foreground'
             ]"
           >
             About
+          </a>
+        </RouterLink>
+
+        <!-- Article -->
+        <RouterLink to="/article" custom v-slot="{ href, navigate, isActive }">
+          <a
+            :href="href"
+            @click="navigate"
+            :class="[
+              'rounded-md px-3 py-2 transition-colors',
+              isActive
+                ? 'bg-primary/20 text-foreground'
+                : 'text-muted-foreground hover:bg-primary/5 hover:text-foreground'
+            ]"
+          >
+            Article
+          </a>
+        </RouterLink>
+
+        <!-- Article -->
+        <RouterLink to="/contact" custom v-slot="{ href, navigate, isActive }">
+          <a
+            :href="href"
+            @click="navigate"
+            :class="[
+              'rounded-md px-3 py-2 transition-colors',
+              isActive
+                ? 'bg-primary/20 text-foreground'
+                : 'text-muted-foreground hover:bg-primary/5 hover:text-foreground'
+            ]"
+          >
+            Contact
           </a>
         </RouterLink>
       </nav>
