@@ -22,11 +22,19 @@ import AppFooter from './components/AppFooter.vue'
 import { ref, onMounted, onUnmounted } from 'vue'
 import { RouterView } from 'vue-router'
 import Fuse from 'fuse.js'
+import { useSeoMeta } from '@unhead/vue'
 
 // @ts-ignore
 import AppHeader from './components/AppHeader.vue'
 // @ts-ignore
 import AppFooter from './components/AppFooter.vue'
+
+useSeoMeta({
+  title: 'NSTCrystal',
+  description: "I'm nstcrystal, a sophomore",
+  ogTitle: 'NSTCrystal',
+  ogDescription: "I'm nstcrystal, a sophomore",
+})
 
 const vFocus = {
   mounted: (el: HTMLElement) => el.focus(),
