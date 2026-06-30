@@ -4,7 +4,7 @@
   >
     <section class="flex h-16 items-center justify-between mx-auto max-w-6xl px-6">
       <!-- Logo -->
-      <RouterLink to="/" class="flex items-center gap-2 font-bold tracking-tight">
+      <RouterLink to="/" class="flex items-center gap-4 font-bold tracking-tight">
         <span
           class="h-7 w-7 rounded-lg"
           :style="{
@@ -13,7 +13,7 @@
           }"
         />
 
-        <span class="text-lg"> NSTCrystal </span>
+        <span class="text-lg">NSTCrystal</span>
       </RouterLink>
 
       <nav class="flex items-center gap-5 text-sm font-medium">
