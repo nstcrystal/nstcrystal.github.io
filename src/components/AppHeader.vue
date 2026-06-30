@@ -2,7 +2,7 @@
   <header
     :class="['sticky top-0 z-50 px-4', isScrolled ? 'glass' : 'bg-transparent border-transparent']"
   >
-    <section :class="['flex h-16 items-center justify-between mx-auto max-w-6xl px-6']">
+    <section class="flex h-16 items-center justify-between mx-auto max-w-6xl px-6">
       <!-- Logo -->
       <RouterLink to="/" class="flex items-center gap-2 font-bold tracking-tight">
         <span

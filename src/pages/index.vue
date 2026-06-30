@@ -1,21 +1,21 @@
 <template>
   <section class="relative overflow-hidden">
     <!-- Background Glow -->
-    <div
+    <!-- <div
       aria-hidden="true"
       class="pointer-events-none absolute -top-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full opacity-40 blur-3xl"
       :style="{ background: 'var(--gradient-brand)' }"
-    />
+    /> -->
 
     <div
-      class="relative mx-auto grid max-w-6xl gap-12 px-6 pb-20 pt-20 md:grid-cols-[1.3fr_1fr] md:items-center"
+      class="relative mx-auto grid max-w-6xl px-6 gap-12 pb-20 pt-20 md:grid-cols-[1.3fr_1fr] md:items-center"
     >
       <!-- Left Content -->
       <div>
         <span
           class="inline-flex items-center rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted-foreground"
         >
-          ✨ Available for freelance — 2026
+          Available for freelance - 2026
         </span>
 
         <h1 class="mt-6 text-5xl font-bold tracking-tight md:text-7xl">
