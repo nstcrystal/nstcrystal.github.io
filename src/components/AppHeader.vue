@@ -3,7 +3,7 @@
     :class="['sticky top-0 z-50', isScrolled ? 'glass' : 'bg-transparent border-transparent']"
   >
     <div class="border-b border-border">
-      <section class="flex h-16 items-center justify-between mx-auto max-w-6xl px-6">
+      <section class="flex h-16 items-center justify-between mx-auto max-w-7xl px-6">
         <!-- Logo -->
         <RouterLink to="/" class="flex items-center gap-4 font-bold tracking-tight">
           <span
