@@ -81,6 +81,10 @@
               Contact
             </a>
           </RouterLink>
+
+          <!-- <button @click="$emit('open-search')" class="p-2 bg-secondary rounded">
+            🔍 Tìm kiếm (Ctrl + /)
+          </button> -->
         </nav>
       </section>
     </div>
