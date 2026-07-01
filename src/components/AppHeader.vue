@@ -2,7 +2,7 @@
   <header
     :class="[
       'sticky top-0 z-50',
-      isScrolled ? 'glass backdrop-blur' : 'bg-transparent border-transparent',
+      isScrolled ? 'glass backdrop-blur-xs' : 'bg-transparent border-transparent',
     ]"
   >
     <div class="border-b border-border">

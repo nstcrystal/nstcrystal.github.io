@@ -88,31 +88,6 @@
     </div>
   </section>
 
-  <!-- TESTIMONIAL -->
-  <section class="mx-auto max-w-4xl px-6 py-12">
-    <figure class="relative rounded-3xl border border-border bg-card p-10 text-center">
-      <div
-        aria-hidden="true"
-        class="absolute -top-5 left-1/2 -translate-x-1/2 rounded-full px-4 py-1 text-xs font-semibold text-primary-foreground"
-        :style="{
-          background: 'var(--gradient-brand)',
-          boxShadow: 'var(--shadow-brand)',
-        }"
-      >
-        Kind words
-      </div>
-
-      <blockquote class="text-xl font-medium leading-relaxed md:text-2xl">
-        "Alex shipped a beautiful, fast product in weeks — not months. He treats design and code as
-        one craft, and it shows in every detail."
-      </blockquote>
-
-      <figcaption class="mt-6 text-sm text-muted-foreground">
-        — Mia Tran, Co-founder at Nimbus
-      </figcaption>
-    </figure>
-  </section>
-
   <!-- CTA -->
   <section class="mx-auto max-w-6xl px-6 pb-24">
     <div
