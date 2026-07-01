@@ -1,7 +1,7 @@
 <template>
   <section class="relative overflow-hidden">
     <div
-      class="relative mx-auto grid max-w-7xl px-6 gap-10 pb-20 pt-15 md:grid-cols-[1.1fr_1fr] md:items-center"
+      class="relative mx-auto grid max-w-7xl px-6 gap-10 py-12 md:grid-cols-[1.1fr_1fr] md:items-center"
     >
       <!-- Left Content -->
       <div>
@@ -65,59 +65,31 @@
             class="w-full rounded-3xl border-4 border-border"
           />
         </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- <div class="relative rounded-3xl border border-border bg-card p-6">
-          <div class="flex items-center gap-4">
-            <div
-              class="flex h-16 w-16 items-center justify-center rounded-2xl text-2xl font-bold text-primary-foreground"
-              :style="{
-                background: 'var(--gradient-brand)',
-                boxShadow: 'var(--shadow-brand)',
-              }"
-            >
-              A
-            </div>
+  <!-- STATS -->
+  <section class="mx-auto max-w-7xl px-6 py-12">
+    <div class="grid gap-6 md:grid-cols-3">
+      <div
+        v-for="stat in stats"
+        :key="stat.values"
+        class="rounded-2xl border border-border bg-card p-8 text-center"
+      >
+        <div class="text-5xl font-bold" :style="{ color: 'var(--brand)' }">
+          {{ stat.key }}
+        </div>
 
-            <div>
-              <div class="font-semibold">Alex Nguyen</div>
-              <div class="text-sm text-muted-foreground">Hanoi, Vietnam · UTC+7</div>
-            </div>
-          </div>
-
-          <dl class="mt-6 grid grid-cols-2 gap-3 text-sm">
-            <div class="rounded-xl border border-border bg-background p-3">
-              <dt class="text-xs text-muted-foreground">Status</dt>
-              <dd class="mt-1 flex items-center gap-2 font-medium">
-                <span
-                  class="inline-block h-2 w-2 rounded-full"
-                  :style="{ background: 'var(--brand)' }"
-                />
-                Open to work
-              </dd>
-            </div>
-
-            <div class="rounded-xl border border-border bg-background p-3">
-              <dt class="text-xs text-muted-foreground">Focus</dt>
-              <dd class="mt-1 font-medium">Web & Product</dd>
-            </div>
-
-            <div class="rounded-xl border border-border bg-background p-3">
-              <dt class="text-xs text-muted-foreground">Booking</dt>
-              <dd class="mt-1 font-medium">Q3 2026</dd>
-            </div>
-
-            <div class="rounded-xl border border-border bg-background p-3">
-              <dt class="text-xs text-muted-foreground">Rate</dt>
-              <dd class="mt-1 font-medium">From $80/hr</dd>
-            </div>
-          </dl>
-        </div> -->
+        <div class="mt-2 text-sm text-muted-foreground">
+          {{ stat.values }}
+        </div>
       </div>
     </div>
   </section>
 
   <!-- TESTIMONIAL -->
-  <section class="mx-auto max-w-4xl px-6 pb-24">
+  <section class="mx-auto max-w-4xl px-6 py-12">
     <figure class="relative rounded-3xl border border-border bg-card p-10 text-center">
       <div
         aria-hidden="true"
@@ -172,5 +144,18 @@
 </template>
 
 <script setup lang="ts">
-// Không cần script nếu chưa có logic
+const stats = [
+  {
+    key: '0',
+    values: 'years of experience',
+  },
+  {
+    key: '1',
+    values: 'projects',
+  },
+  {
+    key: '2',
+    values: 'stars',
+  },
+]
 </script>

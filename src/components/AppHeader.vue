@@ -1,6 +1,9 @@
 <template>
   <header
-    :class="['sticky top-0 z-50', isScrolled ? 'glass' : 'bg-transparent border-transparent']"
+    :class="[
+      'sticky top-0 z-50',
+      isScrolled ? 'glass backdrop-blur' : 'bg-transparent border-transparent',
+    ]"
   >
     <div class="border-b border-border">
       <section class="flex h-16 items-center justify-between mx-auto max-w-7xl px-6">
