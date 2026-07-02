@@ -34,24 +34,32 @@ import type { BlogPostInfo, PostFrontmatter } from '../composables/blog'
 const posts = ref<BlogPostInfo[]>([])
 
 // Hàm bóc tách Frontmatter thủ công từ chuỗi thuần túy
-const parseFrontmatterManual = (rawContent: string): Partial<PostFrontmatter> => {
-  if (typeof rawContent !== 'string') return {}
+const parseFrontmatterManual = (rawContent: string | undefined): Partial<PostFrontmatter> => {
+  if (!rawContent || typeof rawContent !== 'string') return {}
 
   const matches = rawContent.match(/^---([\s\S]*?)---/)
   const result: Record<string, string> = {}
 
+  // Kiểm tra chắc chắn matches và phần tử index 1 tồn tại
   if (matches && matches[1]) {
     const lines = matches[1].split('\n')
+
     lines.forEach((line) => {
       const parts = line.split(':')
-      if (parts.length >= 2) {
+
+      // BẢO VỆ CHẮC CHẮN: Kiểm tra mảng parts có ít nhất 2 phần tử và phần tử đầu tiên hợp lệ
+      if (parts.length >= 2 && parts[0]) {
         const key = parts[0].trim()
+        // Gộp lại nội dung đề phòng giá trị chứa dấu hai chấm
         const value = parts
           .slice(1)
           .join(':')
           .trim()
           .replace(/^["']|["']$/g, '')
-        result[key] = value
+
+        if (key) {
+          result[key] = value
+        }
       }
     })
   }
