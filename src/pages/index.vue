@@ -107,12 +107,12 @@
           </p>
         </div>
 
-        <a
-          href="mailto:hello@example.com"
+        <RouterLink
+          to="/contact"
           class="inline-flex items-center justify-center rounded-full bg-background px-6 py-3 text-sm font-semibold text-foreground transition-transform hover:-translate-y-0.5"
         >
-          Say hello →
-        </a>
+          Contact →
+        </RouterLink>
       </div>
     </div>
   </section>
