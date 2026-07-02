@@ -1,13 +1,13 @@
 ---
-title: Vue Router Guide
-description: Học Vue Router từ cơ bản
-date: 2026-06-30
-cover: /images/vue-router.png
-tags:
-  - Vue
-  - Router
+title: Hướng dẫn học Vue 3 cho người mới
+date: 2026-07-02
+description: Bài viết giúp bạn làm quen nhanh với Composition API trong Vue 3.
 ---
 
-# Vue Router
+# Hướng dẫn học Vue 3 cho người mới
 
-Đây là nội dung bài viết.
+Đây là nội dung chi tiết của bài viết số 1. Bạn có thể viết **chữ đậm**, _chữ nghiêng_ hoặc chèn code block ở đây:
+
+```javascript
+const app = createApp(App)
+```

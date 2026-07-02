@@ -1,12 +1,9 @@
 ---
-title: Hello World
-description: Bài viết đầu tiên
+title: Xin chào thế giới
 date: 2026-07-01
-cover: /images/test.png
-tags:
-  - Vue
+description: Đây là bài viết đầu tiên của tôi.
 ---
 
-# Xin chào
+# Nội dung bài viết ở đây...
 
-Đây là nội dung.
+Hello

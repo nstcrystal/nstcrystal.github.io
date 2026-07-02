@@ -24,9 +24,10 @@ const router = createRouter({
       component: Blog,
     },
     {
-      path: '/article/:slug',
+      path: '/article/:id',
       name: 'articlePost',
       component: BlogPost,
+      props: true,
     },
     {
       path: '/contact',
