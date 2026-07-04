@@ -43,14 +43,13 @@ const socialLinks = computed(() =>
       color: 'bg-gray-700',
       hoverColor: 'hover:bg-gray-800',
     },
-    {
-      name: 'Instagram',
-      url: PersonalInfo.instagram,
-      icon: Instagram,
-      color: 'bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500',
-      hoverColor: 'hover:from-purple-700 hover:via-pink-700 hover:to-orange-600',
-    },
-    // ...
+    // {
+    //   name: 'Instagram',
+    //   url: PersonalInfo.instagram,
+    //   icon: Instagram,
+    //   color: 'bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500',
+    //   hoverColor: 'hover:from-purple-700 hover:via-pink-700 hover:to-orange-600',
+    // },
   ].filter((item) => item.url),
 )
 </script>
