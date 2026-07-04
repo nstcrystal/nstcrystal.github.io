@@ -1,10 +1,10 @@
-import type { PersonalInfo } from '@/types'
+// import type { PersonalInfo } from '@/types'
 
 /**
  * Personal information data
  * Update this file to change your personal details
  */
-export const personalInfo: PersonalInfo = {
+export const PersonalInfo = {
   name: 'NSTCrystal',
   role: 'Developer',
   shortBio:
@@ -35,9 +35,9 @@ export const personalInfo: PersonalInfo = {
   ],
   email: 'nstcrystal@gmail.com',
   github: 'https://github.com/nstcrystal',
-  // linkedin: "https://linkedin.com/",
   facebook: 'https://www.facebook.com/nst.crystal.1',
   youtube: 'https://www.youtube.com/@nstcrystal9349',
-  // instagram: "https://www.instagram.com/crystal.duy/",
+  // instagram: 'https://www.instagram.com/crystal.duy/',
+  // linkedin: "https://linkedin.com/",
   // twitter: "https://twitter.com/",
 }

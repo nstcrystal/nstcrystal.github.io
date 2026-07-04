@@ -3,7 +3,7 @@ import { computed } from 'vue'
 import { Motion } from 'motion-v'
 import { Github, Facebook, Youtube, Linkedin, Instagram, Twitter, Mail } from 'lucide-vue-next'
 
-import { personalInfo } from '../composables/personalInfo.ts'
+import { PersonalInfo } from '../composables/personalInfo.ts'
 
 interface SocialLink {
   name: string
@@ -17,35 +17,35 @@ const socialLinks = computed(() =>
   [
     {
       name: 'GitHub',
-      url: personalInfo.github,
+      url: PersonalInfo.github,
       icon: Github,
       color: 'bg-gray-900',
       hoverColor: 'hover:bg-gray-800',
     },
     {
       name: 'Facebook',
-      url: personalInfo.facebook,
+      url: PersonalInfo.facebook,
       icon: Facebook,
       color: 'bg-blue-600',
       hoverColor: 'hover:bg-blue-700',
     },
     {
       name: 'YouTube',
-      url: personalInfo.youtube,
+      url: PersonalInfo.youtube,
       icon: Youtube,
       color: 'bg-red-600',
       hoverColor: 'hover:bg-red-700',
     },
     {
       name: 'Email',
-      url: `mailto:${personalInfo.email}`,
+      url: `mailto:${PersonalInfo.email}`,
       icon: Mail,
       color: 'bg-gray-700',
       hoverColor: 'hover:bg-gray-800',
     },
     {
       name: 'Instagram',
-      url: personalInfo.instagram,
+      url: PersonalInfo.instagram,
       icon: Instagram,
       color: 'bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500',
       hoverColor: 'hover:from-purple-700 hover:via-pink-700 hover:to-orange-600',
@@ -63,7 +63,7 @@ const socialLinks = computed(() =>
       <Motion
         v-for="(social, index) in socialLinks"
         :key="social.name"
-        is="a"
+        as="a"
         :href="social.url"
         :target="social.name !== 'Email' ? '_blank' : undefined"
         :rel="social.name !== 'Email' ? 'noopener noreferrer' : undefined"

@@ -6,7 +6,7 @@ import PageTransition from '../components/PageTransition.vue'
 import ContactForm from '../components/ContactForm.vue'
 import SocialLinks from '../components/SocialLinks.vue'
 
-import { personalInfo } from '@/composables/personalInfo'
+import { PersonalInfo } from '../composables/personalInfo'
 </script>
 
 <template>
@@ -46,7 +46,7 @@ import { personalInfo } from '@/composables/personalInfo'
 
               <div class="space-y-4">
                 <!-- Email -->
-                <div v-if="personalInfo.email" class="flex items-start gap-3">
+                <div v-if="PersonalInfo.email" class="flex items-start gap-3">
                   <div class="mt-1 rounded-lg bg-blue-50 p-2">
                     <Mail class="text-blue-600" :size="18" />
                   </div>
@@ -55,10 +55,10 @@ import { personalInfo } from '@/composables/personalInfo'
                     <p class="text-sm font-medium text-gray-500">Email</p>
 
                     <a
-                      :href="`mailto:${personalInfo.email}`"
+                      :href="`mailto:${PersonalInfo.email}`"
                       class="text-gray-900 transition-colors hover:text-blue-600"
                     >
-                      {{ personalInfo.email }}
+                      {{ PersonalInfo.email }}
                     </a>
                   </div>
                 </div>
