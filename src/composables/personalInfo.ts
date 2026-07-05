@@ -1,9 +1,14 @@
 // import type { PersonalInfo } from '@/types'
 
+import avatarImg from '../../public/images/Avatar_Image.jpg'
+import homeHeroImg from '../../public/images/Home_Image.jpg'
+import devIllustrationImg from '../../public/images/dev-illustration.jpg'
+
 /**
  * Personal information data
  * Update this file to change your personal details
  */
+
 export const PersonalInfo = {
   name: 'NSTCrystal',
   role: 'Developer',
@@ -11,6 +16,9 @@ export const PersonalInfo = {
     'Passionate about creating beautiful and functional web experiences. Currently exploring modern web technologies and design systems.',
   fullBio:
     "I'm an Information Technology student with a strong interest in web development. I am currently focusing on building modern, responsive, and user-friendly web applications using technologies such as React, TypeScript, and modern CSS frameworks.",
+  profileAvatar: avatarImg,
+  homeHero: homeHeroImg,
+  devIllustration: devIllustrationImg,
   skills: [
     {
       category: 'Frontend',
