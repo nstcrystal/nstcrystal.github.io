@@ -36,7 +36,7 @@ const router = createRouter({
       component: Contact,
     },
     {
-      path: '/*',
+      path: '/:pathMath(.*)*',
       name: 'notFound',
       component: NotFound,
     },
