@@ -25,10 +25,10 @@ content: |
   Cảm ơn bạn đã ghé thăm. Hãy thoải mái xem qua các [projects](/projects) hoặc ghé thăm [blog](/blog) của mình nhé!
 images:
   - src: /images/Thirty_seven_1.png
-    alt: "37"
-  - src: /images/Voyager.png
-    alt: "Voyager'
+    alt: ""
+  # - src: /images/Voyager.png
+  #   alt: "Voyager'
   - src: /images/Thirty_seven_2.png
-    alt: "37"
-  - src: /images/Cosmic_overture.png
-    alt: "Cosmic Overture"
+    alt: ""
+  # - src: /images/Cosmic_overture.png
+  #   alt: "Cosmic Overture"
