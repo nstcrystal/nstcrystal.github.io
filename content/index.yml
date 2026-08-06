@@ -1,0 +1,98 @@
+seo:
+  title: "Developer"
+  description: "Chào mừng đến với trang web của tôi! Tôi là Võ Văn Duy, một sinh viên tại Huế - Việt Nam."
+title: "NSTCrystal - Developer"
+description: "Tôi tạo code rõ ràng, hiệu quả và xây dựng trải nghiệm web hiện đại. Sống tại Huế - Việt Nam, biến ý tưởng thành sản phẩm thực tế."
+
+
+hero:
+  links:
+    - label: "Contact with me"
+      # to: https://github.com/nstcrystal
+      to: ''
+      color: "neutral"
+  images:
+    - src: /images/random-1.avif
+      alt: Random Image 1
+    - src: /images/random-2.avif
+      alt: Random Image 2
+    - src: /images/random-3.avif
+      alt: Random Image 3
+    - src: /images/random-4.avif
+      alt: Random Image 4
+    - src: /images/random-5.avif
+      alt: Random Image 5
+    - src: /images/random-6.avif
+      alt: Random Image 6
+    - src: /images/random-7.avif
+      alt: Random Image 7
+    - src: /images/random-8.avif
+      alt: Random Image 8
+    - src: /images/random-9.avif
+      alt: Random Image 9
+
+
+about:
+  title: "About Me"
+  description: |
+    Tôi là một nhà phát triển đam mê xây dựng các ứng dụng web và giải quyết các vấn đề bằng code.
+    Hành trình của tôi kết hợp trí tò mò với việc học tập nhất quán, biến các khái niệm thành các sản phẩm kỹ thuật số có mục đích và hữu dụng.
+
+
+experience:
+  title: Educations and Experience
+  items:
+    - position: "Học tại"
+      date: "2024 - Hiện tại"
+      company:
+        name: Hue University of Sciences
+        logo: "material-symbols:school"
+        url: "https://husc.edu.vn/"
+        color: "#0C66EB"
+
+
+stats:
+  title: Stats
+  # description: Một số số Stat được lấy từ GitHub của tôi.
+
+
+testimonials:
+  - quote: "Duy có khả năng biến ý tưởng thành phần mềm hoạt động rất tốt. Anh ấy tiếp cận từng vấn đề bằng cả sự sáng tạo và khả năng phân tích chặt chẽ, mang lại code sạch sẽ và có thể bảo trì."
+    author:
+      name: 'Võ Quang Chiến'
+      description: '2giosangmitom.is-a.dev'
+      avatar:
+        src: 'https://2giosangmitom.is-a.dev/_ipx/w_400/images/avt.png'
+  
+  # - quote: "Duy has a great ability to turn ideas into working software. He approaches each problem with both creativity and analytical rigor, delivering clean and maintainable code."
+  #   author:
+  #     name: 'GitHub'
+  #     description: 'github.com/nstcrystal'
+  #     avatar:
+  #       src: 'https://avatars.githubusercontent.com/u/148052951?v=4'
+
+
+faq:
+  title: Frequently Asked Questions
+  # description: Answers to common questions about my work and services.
+  categories:
+    - title: About Me
+      questions:
+        - label: Bạn thích điều gì nhất trong công việc của mình?
+          content: |
+            Tôi thích thử thách giải quyết các vấn đề phức tạp thông qua mã. Thật vô cùng bổ ích khi thấy mọi người sử dụng thứ tôi đã tạo ra và thấy nó thực sự hữu ích. Thu hẹp khoảng cách giữa nhu cầu của người dùng và khả năng kỹ thuật là điều thực sự khiến tôi phấn khích.
+        - label: Sở thích của bạn ngoài công việc là gì?
+          content: |
+            Khi không viết code, tôi thích khám phá các công nghệ mới, đọc blog công nghệ và thỉnh thoảng chơi game. Tôi cũng đam mê học hỏi và nâng cao kỹ năng của mình mỗi ngày.
+    
+    - title: Services & Process
+      questions:
+        - label: Bạn cung cấp những dịch vụ gì?
+          content: |
+            Tôi chuyên phát triển web bằng hệ sinh thái Vue.js/Nuxt. Điều này bao gồm xây dựng các trang web đáp ứng, ứng dụng web, API REST và tích hợp các dịch vụ của bên thứ ba. Mục tiêu của tôi là tạo ra trải nghiệm kỹ thuật số liền mạch từ ý tưởng đến triển khai.
+        - label: Quá trình phát triển của bạn như thế nào?
+          content: |
+            Quy trình của tôi mang tính hợp tác và lặp đi lặp lại, thường bao gồm các giai đoạn như Phân tích yêu cầu, Thiết kế giao diện người dùng, Triển khai, Kiểm tra và Triển khai. Tôi điều chỉnh quy trình dựa trên nhu cầu của dự án, luôn tập trung vào mã sạch, có thể bảo trì.
+        - label: Bạn có làm việc trên nguồn mở không?
+          content: |
+            Tuyệt đối! Tôi thích đóng góp cho các dự án nguồn mở và xây dựng các công cụ của riêng mình. Bạn có thể xem kho lưu trữ của tôi trên [GitHub](https://github.com/nstcrystal).

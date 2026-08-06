@@ -1,0 +1,34 @@
+seo:
+  title: "About"
+  description: "Tìm hiểu thêm về hành trình trở thành lập trình viên của tôi, các kỹ năng chuyên môn và niềm đam mê xây dựng các sản phẩm trên nền tảng web."
+title: About Me
+description: Tìm hiểu thêm về hành trình của tôi với tư cách là một lập trình viên tại Huế - Việt Nam, cũng như kinh nghiệm và niềm đam mê của tôi trong việc xây dựng các ứng dụng web.
+content: |
+  Xin chào, tôi là **Võ Văn Duy**, một `sinh viên` Công nghệ thông tin và là lập trình viên tại Huế - Việt Nam. Tôi phát triển các sản phẩm web và biến những ý tưởng thành các sản phẩm hoạt động hiệu quả. 
+  Hành trình của tôi bắt đầu từ sự `tò mò` về cách thức hoạt động của các trang web và theo thời gian sự tò mò này đã phát triển thành niềm `đam mê` thực sự đối với lập trình. Kể từ đó, tôi không ngừng học hỏi và xây dựng các sản phẩm, tập trung chủ yếu vào hệ sinh thái **Vue.js/Nuxt**.
+
+  ### My Tech Stack
+
+  Tôi chủ yếu sử dụng các công nghệ sau:
+
+  - **Front-end:** Vue.js, Nuxt, Tailwind CSS
+  - **Back-end:** Node.js
+  - **Other:** Git, TypeScrips
+
+  ### What I Focus On
+
+  Tôi chú trọng việc viết mã nguồn gọn gàng, dễ bảo trì và xây dựng các giao diện vừa đẹp mắt vừa giàu tính năng. Tôi thích tìm hiểu các công nghệ mới và ứng dụng chúng để giải quyết những vấn đề thực tế.
+
+  ### Beyond the Screen
+
+  Những lúc không lập trình, bạn có thể thấy tôi đang tìm hiểu các bài viết về công nghệ mới, thử nghiệm các thiết lập Linux hoặc chơi game.
+  Cảm ơn bạn đã ghé thăm. Hãy thoải mái xem qua các [projects](/projects) hoặc ghé thăm [blog](/blog) của mình nhé!
+images:
+  - src: /images/Thirty_seven_1.png
+    alt: "37"
+  - src: /images/Voyager.png
+    alt: "Voyager'
+  - src: /images/Thirty_seven_2.png
+    alt: "37"
+  - src: /images/Cosmic_overture.png
+    alt: "Cosmic Overture"
