@@ -1,34 +1,33 @@
 ---
-title: "My Developer Setup: From Linux to Editor"
-description: A tour of my daily development environment — the tools, extensions, and workflows that help me stay productive as a developer.
-date: 2025-02-20
+title: "My Developer Setup"
+description: Khám phá môi trường phát triển hàng ngày của tôi - bao gồm các công cụ, tiện ích mở rộng và quy trình làm việc giúp tôi duy trì hiệu suất công việc với tư cách là một lập trình viên.
+date: 2026-07-12
 image: https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
 minRead: 4
 author:
-  name: Võ Văn Duy
+  name: NSTCrystal
   avatar:
     src: https://avatars.githubusercontent.com/u/148052951?v=4
-    alt: Võ Văn Duy
+    alt: NSTCrystal
 ---
 
-A good development setup makes a huge difference in productivity. Over time, I've refined mine to be fast, reliable, and comfortable.
+Một môi trường phát triển tốt tạo ra sự khác biệt lớn về năng suất. Theo thời gian, tôi đã tinh chỉnh hệ thống của mình để đảm bảo sự nhanh chóng, ổn định và thoải mái.
 
 ## The OS: Linux
 
-I run Linux (Arch) as my daily driver. The terminal-first workflow, package management, and full control over my environment are things I can't give up.
+Tôi sử dụng Linux (Arch) làm hệ điều hành chính hàng ngày. Quy trình làm việc ưu tiên sử dụng terminal, hệ thống quản lý gói và khả năng kiểm soát toàn diện môi trường làm việc là những điều tôi không thể từ bỏ.
 
 ## The Editor: VS Code
 
-VS Code is my editor of choice. A few extensions I can't live without:
+VS Code là trình soạn thảo tôi ưu tiên lựa chọn. Dưới đây là một vài Extentions mà tôi không thể thiếu:
 
-- **ESLint** — catch errors before they happen
-- **Prettier** — consistent formatting
-- **Vue Language Features** — first-class Vue support
-- **Tailwind CSS IntelliSense** — helpful autocomplete
+- **Catpuccin for VSCode:** Themes đẹp cho VSCode
+- **Prettier:** Định dạng mã nguồn nhất quán
+- **VSCode Google Translate:** Dịch ngôn ngữ ngay trong VSCode
 
 ## Version Control
 
-Git is a daily tool. I use conventional commits and keep my commit history clean:
+Git là công cụ tôi sử dụng hàng ngày. Tôi áp dụng quy tắc Conventional Commits và giữ cho lịch sử commit luôn gọn gàng:
 
 ```bash
 git add .
@@ -37,10 +36,10 @@ git commit -m "feat: add user authentication"
 
 ## Terminal
 
-I live in the terminal — `zsh` with useful aliases for quick navigation, and `tldr` for fast command references.
+Tôi sống thường xuyên sử dụng môi trường dòng lệnh terminal - sử dụng `fish` với các alias hữu ích để điều hướng nhanh
 
 ## Continuous Learning
 
-The most important part of my setup is a habit of learning. Every day I read something new about web development, try a new tool, or improve an old one.
+Yếu tố quan trọng nhất trong quy trình làm việc của tôi là thói quen học hỏi. Mỗi ngày, tôi đều đọc những kiến ​​thức mới về phát triển web, thử nghiệm một công cụ mới hoặc cải tiến một công cụ hiện có.
 
-Your setup should be personal — build it around how you work best!
+Cách thiết lập không gian làm việc cần mang đậm dấu ấn cá nhân, hãy xây dựng nó dựa trên phong cách làm việc hiệu quả nhất đối với bạn!

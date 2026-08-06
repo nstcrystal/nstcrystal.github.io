@@ -15,7 +15,7 @@ Nuxt là một trong những framework tốt nhất để xây dựng các ứng
 
 ## File-Based Routing
 
-Một trong những điều đầu tiên bạn sẽ nhận thấy là việc thiết lập định tuyến (routing) rất dễ dàng. Chỉ cần tạo một tệp trong thư mục `pages/` và Nuxt sẽ tự động tạo tuyến đường cho bạn.
+Một trong những điều đầu tiên bạn sẽ nhận thấy là việc thiết lập định tuyến routing rất dễ dàng. Chỉ cần tạo một tệp trong thư mục `pages/` và Nuxt sẽ tự động tạo tuyến đường cho bạn.
 
 ```vue
 <template>

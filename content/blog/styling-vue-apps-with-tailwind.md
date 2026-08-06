@@ -1,21 +1,21 @@
 ---
 title: "Styling Modern Vue Apps with Tailwind CSS"
-description: A practical look at using Tailwind CSS in your Vue projects, with tips on theming, dark mode, and keeping your styles maintainable.
-date: 2025-04-10
+description: Cái nhìn thực tế về việc sử dụng Tailwind CSS trong các dự án Vue, cùng các mẹo về tùy biến giao diện, chế độ tối dark mode và cách duy trì mã nguồn CSS dễ bảo trì.
+date: 2026-06-10
 image: https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
 minRead: 5
 author:
-  name: Võ Văn Duy
+  name: NSTCrystal
   avatar:
     src: https://avatars.githubusercontent.com/u/148052951?v=4
-    alt: Võ Văn Duy
+    alt: NSTCrystal
 ---
 
-Tailwind CSS has completely changed how I write styles. Instead of jumping between HTML and CSS files, everything lives right in the markup.
+Tailwind CSS đã thay đổi hoàn toàn cách tôi viết style. Thay vì phải chuyển đổi qua lại giữa các tệp HTML và CSS, mọi thứ đều nằm ngay trong phần mã đánh dấu markup.
 
 ## Utility-First Approach
 
-With utility classes, you build components directly in the template:
+Với các lớp tiện ích utility classes, bạn có thể xây dựng các thành phần trực tiếp như trong template.
 
 ```vue
 <button class="rounded-lg bg-blue-500 px-4 py-2 text-white hover:bg-blue-600">
@@ -23,11 +23,11 @@ With utility classes, you build components directly in the template:
 </button>
 ```
 
-No more naming classes and hunting through stylesheets.
+Không còn cảnh phải đặt tên class và lục lọi trong các file stylesheet nữa.
 
 ## Dark Mode
 
-Dark mode is built into Tailwind's class strategy. Just add `dark:` variants:
+Chế độ Dark mode được tích hợp sẵn trong cơ chế sử dụng class của Tailwind. Chỉ cần thêm các biến thể `dark:`:
 
 ```vue
 <div class="bg-white dark:bg-slate-900">
@@ -37,12 +37,12 @@ Dark mode is built into Tailwind's class strategy. Just add `dark:` variants:
 
 ## Pairing with Nuxt UI
 
-The best part is combining Tailwind with Nuxt UI components. You get beautiful, accessible components out of the box, and you can customize them with Tailwind classes.
+Điểm tuyệt vời nhất là việc kết hợp Tailwind với các thành phần Nuxt UI. Bạn sẽ có ngay những thành phần đẹp mắt, đảm bảo accessible mà không cần cấu hình nhiều, đồng thời có thể tùy biến chúng bằng các class của Tailwind.
 
 ## Keep It Clean
 
-- Use `@apply` sparingly for repeated patterns
-- Create small, focused components
-- Use your config file for design tokens
+- Hãy sử dụng `@apply` một cách tiết chế cho các mẫu lặp lại.
+- Tạo các thành phần nhỏ, tập trung.
+- Sử dụng tệp cấu hình của bạn cho các design token.
 
-Tailwind made styling fun again. Give it a try in your next Vue project!
+Tailwind đã biến việc tạo kiểu giao diện trở nên thú vị trở lại. Hãy thử dùng nó trong dự án Vue tiếp theo của bạn nhé!
