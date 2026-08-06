@@ -62,7 +62,7 @@ testimonials:
       name: 'Võ Quang Chiến'
       description: '2giosangmitom.is-a.dev'
       avatar:
-        src: 'https://2giosangmitom.is-a.dev/_ipx/w_400/images/avt.png'
+        src: '2giosangmitom.png'
   
   # - quote: "Duy has a great ability to turn ideas into working software. He approaches each problem with both creativity and analytical rigor, delivering clean and maintainable code."
   #   author:
@@ -80,7 +80,7 @@ faq:
       questions:
         - label: Bạn thích điều gì nhất trong công việc của mình?
           content: |
-            Tôi thích thử thách giải quyết các vấn đề phức tạp thông qua mã. Thật vô cùng bổ ích khi thấy mọi người sử dụng thứ tôi đã tạo ra và thấy nó thực sự hữu ích. Thu hẹp khoảng cách giữa nhu cầu của người dùng và khả năng kỹ thuật là điều thực sự khiến tôi phấn khích.
+            Tôi thích thử thách giải quyết các vấn đề phức tạp. Thật vô tuyệt vời khi thấy mọi người sử dụng thứ tôi đã tạo ra và thấy nó thực sự hữu ích. Thu hẹp khoảng cách giữa nhu cầu của người dùng và khả năng kỹ thuật là điều thực sự khiến tôi phấn khích.
         - label: Sở thích của bạn ngoài công việc là gì?
           content: |
             Khi không viết code, tôi thích khám phá các công nghệ mới, đọc blog công nghệ và thỉnh thoảng chơi game. Tôi cũng đam mê học hỏi và nâng cao kỹ năng của mình mỗi ngày.
@@ -89,10 +89,10 @@ faq:
       questions:
         - label: Bạn cung cấp những dịch vụ gì?
           content: |
-            Tôi chuyên phát triển web bằng hệ sinh thái Vue.js/Nuxt. Điều này bao gồm xây dựng các trang web đáp ứng, ứng dụng web, API REST và tích hợp các dịch vụ của bên thứ ba. Mục tiêu của tôi là tạo ra trải nghiệm kỹ thuật số liền mạch từ ý tưởng đến triển khai.
+            Tôi chuyên phát triển web bằng hệ sinh thái Vue.js/Nuxt. Điều này bao gồm xây dựng các trang web, ứng dụng web, API REST và tích hợp các dịch vụ của bên thứ ba. Mục tiêu của tôi là tạo ra trải nghiệm kỹ thuật số liền mạch từ ý tưởng đến triển khai.
         - label: Quá trình phát triển của bạn như thế nào?
           content: |
-            Quy trình của tôi mang tính hợp tác và lặp đi lặp lại, thường bao gồm các giai đoạn như Phân tích yêu cầu, Thiết kế giao diện người dùng, Triển khai, Kiểm tra và Triển khai. Tôi điều chỉnh quy trình dựa trên nhu cầu của dự án, luôn tập trung vào mã sạch, có thể bảo trì.
+            Quy trình của tôi mang tính hợp tác và lặp đi lặp lại, thường bao gồm các giai đoạn như Phân tích yêu cầu, Thiết kế giao diện người dùng, Kiểm tra và Triển khai. Tôi điều chỉnh quy trình dựa trên nhu cầu của dự án, luôn tập trung vào mã sạch, có thể bảo trì.
         - label: Bạn có làm việc trên nguồn mở không?
           content: |
-            Tuyệt đối! Tôi thích đóng góp cho các dự án nguồn mở và xây dựng các công cụ của riêng mình. Bạn có thể xem kho lưu trữ của tôi trên [GitHub](https://github.com/nstcrystal).
+            Chắc chắc có! Tôi thích đóng góp cho các dự án nguồn mở và xây dựng các công cụ của riêng mình. Bạn có thể xem kho lưu trữ của tôi trên [GitHub](https://github.com/nstcrystal).
