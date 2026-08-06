@@ -23,3 +23,23 @@
     background-color: #474747;
   }
 }
+
+* {
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
+  user-select: none;
+  /* -webkit-tap-highlight-color: transparent; */
+  touch-action: manipulation;
+
+  /* border-color: var(--color-border); */
+}
+
+*:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+img,
+a {
+  -webkit-user-drag: none;
+}
