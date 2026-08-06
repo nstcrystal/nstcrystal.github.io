@@ -36,7 +36,7 @@ git commit -m "feat: add user authentication"
 
 ## Terminal
 
-Tôi sống thường xuyên sử dụng môi trường dòng lệnh terminal - sử dụng `fish` với các alias hữu ích để điều hướng nhanh
+Tôi thường xuyên sử dụng môi trường dòng lệnh terminal - sử dụng `fish` với các alias hữu ích để điều hướng nhanh
 
 ## Continuous Learning
 
