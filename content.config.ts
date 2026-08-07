@@ -105,6 +105,28 @@ export default defineContentConfig({
         links: z.array(createButtonSchema())
       })
     }),
+    contact: defineCollection({
+      type: 'page',
+      source: 'contact.yml',
+      schema: z.object({
+        links: z.array(createButtonSchema()),
+        form: z.object({
+          icon: z.string(),
+          title: z.string(),
+          description: z.string(),
+          nameLabel: z.string(),
+          namePlaceholder: z.string(),
+          messageLabel: z.string(),
+          messagePlaceholder: z.string(),
+          submitLabel: z.string(),
+          submittingLabel: z.string(),
+          successTitle: z.string(),
+          successDescription: z.string(),
+          errorTitle: z.string(),
+          errorDescription: z.string()
+        })
+      })
+    }),
     about: defineCollection({
       type: 'page',
       source: 'about.yml',

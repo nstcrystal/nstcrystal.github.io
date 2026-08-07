@@ -10,6 +10,9 @@ export default defineAppConfig({
     available: true,
     github: {
       username: 'nstcrystal'
+    },
+    contactApi: {
+      url: 'https://webhook-discord-qtkh.onrender.com/api/contact'
     }
   },
   ui: {
@@ -46,7 +49,7 @@ export default defineAppConfig({
         'to': 'mailto:nstcrystal@gmail.com',
         'target': '_blank',
         'aria-label': 'Email'
-      },
+      }
       // {
       //   'icon': 'i-simple-icons-nuxt',
       //   'to': 'https://nuxt.com/',

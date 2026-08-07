@@ -3,6 +3,8 @@ import type { IndexCollectionItem } from '@nuxt/content'
 
 const { footer, global } = useAppConfig()
 
+const meetingLink = (global as typeof global & { meetingLink?: string }).meetingLink
+
 defineProps<{
   page: IndexCollectionItem
 }>()
@@ -110,7 +112,7 @@ defineProps<{
             :color="global.available ? 'success' : 'error'"
             variant="ghost"
             class="gap-2"
-            :to="global.available ? global.meetingLink : ''"
+            :to="global.available ? (meetingLink || `mailto:${global.email}`) : ''"
             :label="global.available ? 'Available for new projects' : 'Not available at the moment'"
           >
             <template #leading>
