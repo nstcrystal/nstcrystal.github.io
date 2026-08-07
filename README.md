@@ -1,11 +1,11 @@
 # NSTCrystal Portfolio
 
-Trang web cá nhân của **Võ Văn Duy (NSTCrystal)** — lập trình viên web tại Huế, Việt Nam. Nơi giới thiệu về tôi, các dự án đã xây dựng và chia sẻ những bài viết về lập trình, công nghệ.
+Trang web cá nhân của **NSTCrystal (Võ Văn Duy)** - Nơi giới thiệu về tôi, các dự án đã xây dựng và chia sẻ những bài viết về lập trình, công nghệ.
 
 ## ✨ Tính năng
 
 - Trang chủ với Hero, giới thiệu, kinh nghiệm, thống kê GitHub, testimonials và FAQ
-- Trang Portfolio giới thiệu các dự án nổi bật
+- Trang Projects giới thiệu các dự án nổi bật
 - Trang Blog với bài viết chi tiết
 - Trang About mô tả hành trình và tech stack
 - Hỗ trợ **Dark mode** / Light mode
@@ -14,16 +14,22 @@ Trang web cá nhân của **Võ Văn Duy (NSTCrystal)** — lập trình viên w
 
 ## 🛠️ Tech Stack
 
-- [Nuxt 4](https://nuxt.com) — Framework Vue full-stack
-- [Nuxt UI](https://ui.nuxt.com) — UI components
-- [Nuxt Content](https://content.nuxt.com) — CMS dựa trên file
-- [Tailwind CSS](https://tailwindcss.com) — Styling
-- [Nuxt Image](https://image.nuxt.com) — Tối ưu hình ảnh
-- [nuxt-og-image](https://github.com/nuxt-modules/og-image) — Open Graph image
-- [VueUse](https://vueuse.org) — Utility composables
-- [motion-v](https://motion-v.dev) — Animations
+- [Nuxt 4](https://nuxt.com) - Framework Vue full-stack
+- [Nuxt UI](https://ui.nuxt.com) - UI components
+- [Nuxt Content](https://content.nuxt.com) - CMS dựa trên file
+- [Tailwind CSS](https://tailwindcss.com) - Styling
+- [Nuxt Image](https://image.nuxt.com) - Tối ưu hình ảnh
+- [nuxt-og-image](https://github.com/nuxt-modules/og-image) - Open Graph image
+- [VueUse](https://vueuse.org) - Utility composables
+- [motion-v](https://motion-v.dev) - Animations
 
 ## 🚀 Bắt đầu
+
+Clone repo:
+
+```bash
+git clone https://github.com/nstcrystal/nstcrystal.github.io.git
+```
 
 Yêu cầu: [Node.js](https://nodejs.org) (>= 20) và [pnpm](https://pnpm.io).
 
@@ -51,10 +57,10 @@ Mở http://localhost:3000 để xem kết quả.
 
 Tất cả nội dung nằm trong thư mục [`content/`](content), bao gồm:
 
-- [`content/index.yml`](content/index.yml) — dữ liệu trang chủ (hero, about, experience, stats, testimonials, faq)
-- [`content/projects/*.yml`](content/projects) — danh sách dự án
-- [`content/blog/*.md`](content/blog) — bài viết blog
-- [`content/about.yml`](content/about.yml) — nội dung trang about
+- [`content/index.yml`](content/index.yml) - dữ liệu trang chủ (hero, about, experience, stats, testimonials, faq)
+- [`content/projects/*.yml`](content/projects) - danh sách dự án
+- [`content/blog/*.md`](content/blog) - bài viết blog
+- [`content/about.yml`](content/about.yml) - nội dung trang about
 
 Schema nội dung được định nghĩa tại [`content.config.ts`](content.config.ts).
 
