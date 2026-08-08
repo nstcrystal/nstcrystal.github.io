@@ -8,6 +8,7 @@ Trang web cá nhân của **NSTCrystal (Võ Văn Duy)** - Nơi giới thiệu v�
 - Trang Projects giới thiệu các dự án nổi bật
 - Trang Blog với bài viết chi tiết
 - Trang About mô tả hành trình và tech stack
+- Trang Contact dùng để liên hệ với tôi nếu cần
 - Hỗ trợ **Dark mode** / Light mode
 - **SEO** và **Open Graph image** tự động cho từng trang
 - Nội dung được quản lý bằng file YAML/Markdown thông qua **Nuxt Content**
@@ -41,7 +42,7 @@ pnpm install
 pnpm dev
 ```
 
-Mở http://localhost:3000 để xem kết quả.
+Mở `http://localhost:3000` để xem kết quả.
 
 ## 📦 Scripts
 
@@ -61,6 +62,7 @@ Tất cả nội dung nằm trong thư mục [`content/`](content), bao gồm:
 - [`content/projects/*.yml`](content/projects) - danh sách dự án
 - [`content/blog/*.md`](content/blog) - bài viết blog
 - [`content/about.yml`](content/about.yml) - nội dung trang about
+- [`content/cantact.yml`](content/contact.yml) - nội dung trang Contact
 
 Schema nội dung được định nghĩa tại [`content.config.ts`](content.config.ts).
 
