@@ -30,6 +30,7 @@ Clone repo:
 
 ```bash
 git clone https://github.com/nstcrystal/nstcrystal.github.io.git
+cd nstcrystal.github.io
 ```
 
 Yêu cầu: [Node.js](https://nodejs.org) (>= 20) và [pnpm](https://pnpm.io).
