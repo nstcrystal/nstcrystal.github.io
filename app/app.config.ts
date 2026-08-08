@@ -6,7 +6,7 @@ export default defineAppConfig({
       alt: 'Võ Văn Duy profile picture'
     },
     // meetingLink: 'https://github.com/nstcrystal',
-    // email: 'nstcrystal@gmail.com',
+    email: 'nstcrystal@gmail.com',
     available: true,
     github: {
       username: 'nstcrystal'
