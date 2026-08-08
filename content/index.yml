@@ -8,8 +8,7 @@ description: "Tôi tạo mã nguồn rõ ràng, hiệu quả và xây dựng tr�
 hero:
   links:
     - label: "Contact with me"
-      # to: https://github.com/nstcrystal
-      to: ''
+      to: '/contact'
       color: "neutral"
   images:
     - src: /images/random-1.avif

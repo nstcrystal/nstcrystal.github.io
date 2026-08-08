@@ -112,7 +112,7 @@ defineProps<{
             :color="global.available ? 'success' : 'error'"
             variant="ghost"
             class="gap-2"
-            :to="global.available ? (meetingLink || `mailto:${global.email}`) : ''"
+            :to="global.available ? (meetingLink) : ''"
             :label="global.available ? 'Available for new projects' : 'Not available at the moment'"
           >
             <template #leading>
