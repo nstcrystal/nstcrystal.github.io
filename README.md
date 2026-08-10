@@ -63,7 +63,7 @@ Tất cả nội dung nằm trong thư mục [`content/`](content), bao gồm:
 - [`content/projects/*.yml`](content/projects) - danh sách dự án
 - [`content/blog/*.md`](content/blog) - bài viết blog
 - [`content/about.yml`](content/about.yml) - nội dung trang about
-- [`content/cantact.yml`](content/contact.yml) - nội dung trang Contact
+- [`content/contact.yml`](content/contact.yml) - nội dung trang Contact
 
 Schema nội dung được định nghĩa tại [`content.config.ts`](content.config.ts).
 
