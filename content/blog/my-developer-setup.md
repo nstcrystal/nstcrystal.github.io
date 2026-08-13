@@ -2,7 +2,7 @@
 title: "My Developer Setup"
 description: Khám phá môi trường phát triển hàng ngày của tôi - bao gồm các công cụ, tiện ích mở rộng và quy trình làm việc giúp tôi duy trì hiệu suất công việc với tư cách là một lập trình viên.
 date: 2026-07-12
-image: /images/developer_setup.png
+image: /images/blog/developer_setup.png
 minRead: 4
 author:
   name: NSTCrystal

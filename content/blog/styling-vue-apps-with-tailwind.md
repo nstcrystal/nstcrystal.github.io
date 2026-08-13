@@ -2,7 +2,7 @@
 title: "Styling Modern Vue Apps with Tailwind CSS"
 description: Cái nhìn thực tế về việc sử dụng Tailwind CSS trong các dự án Vue, cùng các mẹo về tùy biến giao diện, chế độ tối dark mode và cách duy trì mã nguồn CSS dễ bảo trì.
 date: 2026-06-10
-image: /images/css.png
+image: /images/blog/css.png
 minRead: 5
 author:
   name: NSTCrystal

@@ -2,7 +2,7 @@
 title: "Nuxt 3: My First Impressions"
 description: Bài chia sẻ chi tiết và dễ hiểu về trải nghiệm bắt đầu với Nuxt của tôi, bao gồm cơ chế định tuyến dựa trên cấu trúc tệp, tính năng tự động import và trải nghiệm tuyệt vời dành cho nhà phát triển.
 date: 2026-06-15
-image: /images/nuxt3.png
+image: /images/blog/nuxt3.png
 minRead: 6
 author:
   name: NSTCrystal
