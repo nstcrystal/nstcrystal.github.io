@@ -31,6 +31,14 @@ hero:
       alt: Random Image 9
     - src: /images/marquee/10.jpg
       alt: Random Image 10
+    - src: /images/marquee/11.jpg
+      alt: Random Image 11
+    - src: /images/marquee/12.jpg
+      alt: Random Image 12
+    - src: /images/marquee/13.jpg
+      alt: Random Image 13
+    - src: /images/marquee/14.jpg
+      alt: Random Image 14
 
 
 about:
