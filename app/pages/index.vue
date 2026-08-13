@@ -15,7 +15,8 @@ useSeoMeta({
   ogTitle: page.value?.seo.title || page.value?.title,
   description: page.value?.seo.description || page.value?.description,
   ogDescription: page.value?.seo.description || page.value?.description,
-  ogImage: 'https://avatars.githubusercontent.com/u/148052951?v=4'
+  // ogImage: 'https://avatars.githubusercontent.com/u/148052951?v=4'
+  ogImage: 'avatar.png'
 })
 </script>
 
