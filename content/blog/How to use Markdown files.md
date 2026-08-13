@@ -7,7 +7,7 @@ minRead: 22
 author:
   name: NSTCrystal
   avatar:
-    src: https://avatars.githubusercontent.com/u/148052951?v=4
+    src: avatar.png
     alt: NSTCrystal
 ---
 
