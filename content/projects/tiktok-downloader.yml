@@ -1,6 +1,6 @@
 title: TikTok Downloader
 description: Một công cụ Web giúp tải video TikTok dễ dàng. Đây là một dự án tiện ích thiết thực, tập trung vào việc xử lý đa phương tiện, quy trình tải xuống và thiết kế API gọn gàng.
-image: /images/tiktok_download.png
+image: /images/projects/tiktok_download.png
 url: https://github.com/nstcrystal/tiktok_download
 tags: ["Tool", "Media", "API"]
 date: "2026"

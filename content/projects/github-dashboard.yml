@@ -1,6 +1,6 @@
 title: GitHub Dashboard
 description: Một ứng dụng Dashboard hiển thị các số liệu thống kê và thông tin GitHub Repos, giúp dễ dàng theo dõi hoạt động GitHub chỉ trong nháy mắt.
-image: /images/github_dashboard.png
+image: /images/projects/github_dashboard.png
 url: https://github.com/nstcrystal/github_dashboard
 tags: ["Web App", "GitHub API", "Dashboard"]
 date: "2026"
