@@ -14,6 +14,20 @@ const { data: projects } = await useAsyncData('projects', () => {
   return queryCollection('projects').all()
 })
 
+const selectedTag = ref('')
+
+const allTags = computed(() => {
+  const tags = (projects.value || []).flatMap(project => project.tags || [])
+  return [...new Set(tags)].sort()
+})
+
+const filteredProjects = computed(() => {
+  if (!selectedTag.value) {
+    return projects.value || []
+  }
+  return (projects.value || []).filter(project => (project.tags || []).includes(selectedTag.value))
+})
+
 const { global } = useAppConfig()
 
 const title = page.value?.seo?.title || page.value?.title
@@ -64,7 +78,34 @@ defineOgImage('Portfolio', { title, description })
       }"
     >
       <Motion
-        v-for="(project, index) in projects"
+        :initial="{ opacity: 0, transform: 'translateY(10px)' }"
+        :while-in-view="{ opacity: 1, transform: 'translateY(0)' }"
+        :in-view-options="{ once: true }"
+      >
+        <div class="flex flex-wrap items-center gap-2">
+          <UButton
+            :label="'All'"
+            size="sm"
+            color="neutral"
+            :variant="selectedTag === '' ? 'solid' : 'soft'"
+            class="rounded-full"
+            @click="selectedTag = ''"
+          />
+          <UButton
+            v-for="tag in allTags"
+            :key="tag"
+            :label="tag"
+            size="sm"
+            color="neutral"
+            :variant="selectedTag === tag ? 'solid' : 'soft'"
+            class="rounded-full"
+            @click="selectedTag = selectedTag === tag ? '' : tag"
+          />
+        </div>
+      </Motion>
+
+      <Motion
+        v-for="(project, index) in filteredProjects"
         :key="project.title"
         :initial="{ opacity: 0, transform: 'translateY(10px)' }"
         :while-in-view="{ opacity: 1, transform: 'translateY(0)' }"
@@ -89,9 +130,20 @@ defineOgImage('Portfolio', { title, description })
             </span>
           </template>
           <template #footer>
+            <div class="flex flex-wrap items-center gap-2">
+              <UBadge
+                v-for="tag in project.tags || []"
+                :key="tag"
+                :label="tag"
+                color="neutral"
+                variant="soft"
+                size="sm"
+                class="rounded-full"
+              />
+            </div>
             <ULink
               :to="project.url"
-              class="text-sm text-primary flex items-center"
+              class="text-sm text-primary flex items-center mt-4"
             >
               View Project
               <UIcon
