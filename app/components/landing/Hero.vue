@@ -159,7 +159,6 @@ defineProps<{
     </template>
 
     <UMarquee
-      pause-on-hover
       class="py-2 -mx-8 sm:-mx-12 lg:-mx-16 [--duration:40s]"
     >
       <Motion
