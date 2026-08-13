@@ -11,24 +11,6 @@ hero:
       to: '/contact'
       color: "neutral"
   images:
-    # - src: /images/random-1.avif
-    #   alt: Random Image 1
-    # - src: /images/random-2.avif
-    #   alt: Random Image 2
-    # - src: /images/random-3.avif
-    #   alt: Random Image 3
-    # - src: /images/random-4.avif
-    #   alt: Random Image 4
-    # - src: /images/random-5.avif
-    #   alt: Random Image 5
-    # - src: /images/random-6.avif
-    #   alt: Random Image 6
-    # - src: /images/random-7.avif
-    #   alt: Random Image 7
-    # - src: /images/random-8.avif
-    #   alt: Random Image 8
-    # - src: /images/random-9.avif
-    #   alt: Random Image 9
     - src: /images/marquee/1.jpg
       alt: Random Image 1
     - src: /images/marquee/2.jpg
@@ -49,14 +31,6 @@ hero:
       alt: Random Image 9
     - src: /images/marquee/10.jpg
       alt: Random Image 10
-    - src: /images/marquee/11.jpg
-      alt: Random Image 11
-    - src: /images/marquee/12.jpg
-      alt: Random Image 12
-    - src: /images/marquee/13.jpg
-      alt: Random Image 13
-    - src: /images/marquee/14.jpg
-      alt: Random Image 14
 
 
 about:
