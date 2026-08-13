@@ -2,5 +2,5 @@ title: Todo App
 description: Một Web app quản lý công việc đơn giản và gọn gàng, giúp sắp xếp các tác vụ và duy trì hiệu suất làm việc. Web này được xây dựng nhằm mục đích thực hành và minh họa các khái niệm cốt lõi về phát triển giao diện người dùng (front-end).
 image: images/projects/todo_app.png
 url: https://github.com/nstcrystal/TodoApp
-tags: ["Front-End", "Web App", "JavaScript"]
+tags: ["Web"]
 date: "2026"
