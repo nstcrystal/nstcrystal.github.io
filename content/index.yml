@@ -87,12 +87,12 @@ faq:
   categories:
     - title: About Me
       questions:
+        - label: Sở thích của bạn là gì?
+          content: |
+            Khi không viết code, tôi thỉnh thoảng chơi game, thích tìm hiểu các công nghệ mới. Tôi cũng đam mê học hỏi và nâng cao kỹ năng của mình mỗi ngày.
         - label: Bạn thích điều gì nhất trong công việc của mình?
           content: |
-            Tôi thích thử thách giải quyết các vấn đề phức tạp. Thật vô tuyệt vời khi thấy mọi người sử dụng thứ tôi đã tạo ra và thấy nó thực sự hữu ích. Thu hẹp khoảng cách giữa nhu cầu của người dùng và khả năng kỹ thuật là điều thực sự khiến tôi phấn khích.
-        - label: Sở thích của bạn ngoài công việc là gì?
-          content: |
-            Khi không viết code, tôi thích khám phá các công nghệ mới, đọc blog công nghệ và thỉnh thoảng chơi game. Tôi cũng đam mê học hỏi và nâng cao kỹ năng của mình mỗi ngày.
+            Tôi thích thử thách giải quyết các vấn đề phức tạp. Thật tuyệt vời khi thấy mọi người sử dụng thứ tôi đã tạo ra và thấy nó thực sự hữu ích. Thu hẹp khoảng cách giữa nhu cầu của người dùng và khả năng kỹ thuật là điều thực sự khiến tôi phấn khích.
     
     - title: Services & Process
       questions:
