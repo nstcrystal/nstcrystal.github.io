@@ -11,7 +11,7 @@ author:
     alt: NSTCrystal
 ---
 
-Ngoài việc viết code để học tập và tiếp thu kinh nghiệm làm việc thì tôi thường thư giãn bản thân bằng nhiều cách khác nhau
+Ngoài việc viết code để học tập và tiếp thu kinh nghiệm làm việc thì tôi thường thư giãn bản thân bằng nhiều cách khác nhau.
 
 ## Game
 
@@ -27,8 +27,17 @@ Tôi thường không chơi game nhiều nhưng lại biết được rất nhi�
 
 ## Manga
 
-Sưu tầm truyện tranh là sở thích từ rất lâu rồi của tôi, gu manga của tôi thì không có cố định. Có thể là `Fantasy`, `Slice of life` ...
+Sưu tầm truyện tranh là sở thích từ rất lâu rồi của tôi, gu manga của tôi thì không có cố định. Có thể là `Fantasy`, `Slice of life`, `romance` ...
 
 - **Magus of Library**
 - **Frieren: Beyond Journey's End**
 - **Shadows House**
+- **Tàn lửa**
+
+## Anime
+
+Anime thì mình có theo dõi nhiều bộ hơn, tiếp cận được nhiều thể loại hơn manga. Có vài bộ mình yêu thích thì nó lại có kết thúc là `bad-ending` (Chả hiểu kiểu gì).
+
+- **Sukasuka** - Tận thế nếu không bận, anh cứu chúng em nhé?
+- **Urusei Yatsura** - Rất là khó chịu thằng main.
+
