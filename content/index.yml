@@ -102,6 +102,6 @@ faq:
         - label: Quá trình phát triển của bạn như thế nào?
           content: |
             Quy trình của tôi mang tính hợp tác và lặp đi lặp lại, thường bao gồm các giai đoạn như Phân tích yêu cầu, Thiết kế giao diện người dùng, Kiểm tra và Triển khai. Tôi điều chỉnh quy trình dựa trên nhu cầu của dự án, luôn tập trung vào mã sạch, có thể bảo trì.
-        - label: Bạn có làm việc trên nguồn mở không?
+        - label: Bạn có làm việc trên mã nguồn mở không?
           content: |
             Chắc chắc có! Tôi thích đóng góp cho các dự án nguồn mở và xây dựng các công cụ của riêng mình. Bạn có thể xem kho lưu trữ của tôi trên [GitHub](https://github.com/nstcrystal).
