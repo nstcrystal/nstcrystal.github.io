@@ -20,3 +20,15 @@ Tôi thường không chơi game nhiều nhưng lại biết được rất nhi�
 - **Genshin Impact**
 
 ![Genshin Impact](genshin_impact_1.jpg)
+
+- **Reverse1999**
+
+![Reverse1999](reverse1999.png)
+
+## Manga
+
+Sưu tầm truyện tranh là sở thích từ rất lâu rồi của tôi, gu manga của tôi thì không có cố định. Có thể là `Fantasy`, `Slice of life` ...
+
+- **Magus of Library**
+- **Frieren: Beyond Journey's End**
+- **Shadows House**
