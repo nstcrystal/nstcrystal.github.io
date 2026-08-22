@@ -1,6 +1,6 @@
 ---
 title: "How to use Markdown files"
-description: Bài viết nói về cách sử dụng file văn bản phổ biến nhất cho dân lập trình là Markdown, học về MarkDown chi tiết nhất và cách sử dụng MarkDown.
+description: Cách sử dụng file văn bản phổ biến nhất cho dân lập trình là Markdown, học về MarkDown chi tiết nhất và cách sử dụng MarkDown.
 date: 2026-08-10
 image: /images/blog/markdown.png
 minRead: 22
