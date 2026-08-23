@@ -93,6 +93,9 @@ faq:
         - label: Bạn thích điều gì nhất trong công việc của mình?
           content: |
             Tôi thích thử thách giải quyết các vấn đề phức tạp. Thật tuyệt vời khi thấy mọi người sử dụng thứ tôi đã tạo ra và thấy nó thực sự hữu ích. Thu hẹp khoảng cách giữa nhu cầu của người dùng và khả năng kỹ thuật là điều thực sự khiến tôi phấn khích.
+        - label: Bạn có người yêu chưa?
+          content: |
+            Tôi vẫn chưa có mảnh tình vắt vai nào nên là cứ sống vui vẻ thôi.
     
     - title: Services & Process
       questions:
