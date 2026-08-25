@@ -1,5 +1,5 @@
 title: Calculator
-description: 
+description: Một ứng dụng máy tính được tạo ra từ VueJS và thư viện Electron. Có thể được build và chạy được trên Windows, MacOS và Linux.
 image: /images/projects/calculator.png
 url: https://github.com/nstcrystal/calculator
 tags: ["App"]
