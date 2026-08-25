@@ -4,6 +4,8 @@ import type { NavigationMenuItem } from '@nuxt/ui'
 defineProps<{
   links: NavigationMenuItem[]
 }>()
+
+const searchOpen = ref(false)
 </script>
 
 <template>
@@ -19,8 +21,12 @@ defineProps<{
       }"
     >
       <template #list-trailing>
+        <SearchButton @click="searchOpen = true" />
         <ColorModeButton />
       </template>
     </UNavigationMenu>
   </div>
+
+  <SearchModal v-model:open="searchOpen" />
 </template>
+
