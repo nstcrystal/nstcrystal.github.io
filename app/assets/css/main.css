@@ -34,7 +34,7 @@
   /* border-color: var(--color-border); */
 }
 
-*:focus {
+*:focus:not(input):not(textarea):not(select) {
   outline: none;
   box-shadow: none;
 }
