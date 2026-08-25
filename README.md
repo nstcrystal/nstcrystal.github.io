@@ -10,6 +10,7 @@ Trang web cá nhân của **NSTCrystal (Võ Văn Duy)** - Nơi giới thiệu v�
 - Trang About mô tả hành trình và tech stack
 - Trang Contact dùng để liên hệ với tôi nếu cần
 - Hỗ trợ **Dark mode** / Light mode
+- Có thanh Tìm kiếm để truy cập nhanh và chính xác đến các nội dung: Page, Blog, Project. 
 - **SEO** và **Open Graph image** tự động cho từng trang
 - Nội dung được quản lý bằng file YAML/Markdown thông qua **Nuxt Content**
 
