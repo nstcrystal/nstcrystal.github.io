@@ -2,7 +2,7 @@
 
 Trang web cá nhân của **NSTCrystal (Võ Văn Duy)** - Nơi giới thiệu về tôi, các dự án đã xây dựng và chia sẻ những bài viết về lập trình, công nghệ.
 
-## ✨ Tính năng
+## Tính năng
 
 - Trang chủ với Hero, giới thiệu, kinh nghiệm, thống kê GitHub, testimonials và FAQ
 - Trang Projects giới thiệu các dự án nổi bật
@@ -13,7 +13,7 @@ Trang web cá nhân của **NSTCrystal (Võ Văn Duy)** - Nơi giới thiệu v�
 - **SEO** và **Open Graph image** tự động cho từng trang
 - Nội dung được quản lý bằng file YAML/Markdown thông qua **Nuxt Content**
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - [Nuxt 4](https://nuxt.com) - Framework Vue full-stack
 - [Nuxt UI](https://ui.nuxt.com) - UI components
@@ -24,7 +24,7 @@ Trang web cá nhân của **NSTCrystal (Võ Văn Duy)** - Nơi giới thiệu v�
 - [VueUse](https://vueuse.org) - Utility composables
 - [motion-v](https://motion-v.dev) - Animations
 
-## 🚀 Bắt đầu
+## Bắt đầu
 
 Clone repo:
 
@@ -45,7 +45,7 @@ pnpm dev
 
 Mở `http://localhost:3000` để xem kết quả.
 
-## 📦 Scripts
+## Scripts
 
 | Script              | Mô tả                              |
 | ------------------- | ---------------------------------- |
@@ -55,22 +55,10 @@ Mở `http://localhost:3000` để xem kết quả.
 | `pnpm lint`         | Kiểm tra code với ESLint           |
 | `pnpm typecheck`    | Kiểm tra kiểu TypeScript           |
 
-## 📝 Quản lý nội dung
-
-Tất cả nội dung nằm trong thư mục [`content/`](content), bao gồm:
-
-- [`content/index.yml`](content/index.yml) - dữ liệu trang chủ (hero, about, experience, stats, testimonials, faq)
-- [`content/projects/*.yml`](content/projects) - danh sách dự án
-- [`content/blog/*.md`](content/blog) - bài viết blog
-- [`content/about.yml`](content/about.yml) - nội dung trang about
-- [`content/contact.yml`](content/contact.yml) - nội dung trang Contact
-
-Schema nội dung được định nghĩa tại [`content.config.ts`](content.config.ts).
-
-## 🌐 Triển khai
+## Triển khai
 
 Dự án được cấu hình sẵn cho **GitHub Pages** (CNAME: `nstcrystal.is-a.dev`) và **Vercel**.
 
-## 📄 License
+## License
 
 [MIT](LICENSE)
