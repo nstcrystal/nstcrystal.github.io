@@ -2,7 +2,7 @@
 title: "My hobbies"
 description: Bài viết chia sẻ về sở thích cá nhân của tôi
 date: 2026-08-22
-image: /genshin_impact_2.jpg
+image: /images/blog/genshin_impact.jpg
 minRead: 5
 author:
   name: NSTCrystal
@@ -19,11 +19,11 @@ Tôi thường không chơi game nhiều nhưng lại biết được rất nhi�
 
 - **Genshin Impact**
 
-![Genshin Impact](genshin_impact_1.jpg)
+![Genshin Impact](/images/genshin_impact.jpg)
 
 - **Reverse1999**
 
-![Reverse1999](reverse1999.png)
+![Reverse1999](/images/reverse1999.png)
 
 ## Manga
 
