@@ -54,14 +54,23 @@ defineOgImage('Portfolio', { title, description })
         :value="page.content"
         unwrap="p"
       />
-      <div class="flex flex-row justify-center items-center py-10 -space-x-8">
-        <PolaroidItem
-          v-for="(image, index) in page.images"
-          :key="index"
-          :image="image"
-          :index
-        />
-      </div>
+      <UCarousel
+        v-if="page.images && page.images.length"
+        v-slot="{ item }"
+        dots
+        :items="page.images"
+        :ui="{ item: 'basis-1/3' }"
+        class="py-10"
+      >
+        <img
+          :src="item.src || item"
+          :alt="item.alt || ''"
+          width="320"
+          height="320"
+          class="rounded-lg object-cover"
+          loading="lazy"
+        >
+      </UCarousel>
     </UPageSection>
   </UPage>
 </template>
