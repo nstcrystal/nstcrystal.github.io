@@ -26,9 +26,9 @@ content: |
 images:
   - src: /images/Thirty_seven_1.png
     alt: ""
-  # - src: /images/Voyager.png
-  #   alt: "Voyager'
+  - src: /images/Voyager.png
+    alt: "Voyager'
   - src: /images/Thirty_seven_2.png
     alt: ""
-  # - src: /images/Cosmic_overture.png
-  #   alt: "Cosmic Overture"
+  - src: /images/Cosmic_overture.png
+    alt: "Cosmic Overture"

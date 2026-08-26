@@ -65,9 +65,7 @@ defineOgImage('Portfolio', { title, description })
         <img
           :src="item.src || item"
           :alt="item.alt || ''"
-          width="320"
-          height="320"
-          class="rounded-lg object-cover"
+          class="w-full aspect-square rounded-lg object-cover"
           loading="lazy"
         >
       </UCarousel>
