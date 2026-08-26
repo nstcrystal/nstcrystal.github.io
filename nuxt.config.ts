@@ -8,8 +8,15 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-og-image',
     'motion-v/nuxt',
-    '@nuxt/icon'
+    '@nuxt/icon',
+    '@nuxtjs/robots',
+    '@nuxtjs/sitemap'
   ],
+
+  site: {
+    url: 'https://nstcrystal.is-a.dev',
+    name: 'NSTCrystal'
+  },
 
   devtools: {
     enabled: true
@@ -28,7 +35,9 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       routes: [
-        '/'
+        '/',
+        '/sitemap.xml',
+        '/robots.txt'
       ],
       crawlLinks: true
     }
