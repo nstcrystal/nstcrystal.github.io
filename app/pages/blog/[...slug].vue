@@ -106,5 +106,7 @@ const formatDate = (dateString: string) => {
         </UPageBody>
       </UPage>
     </UContainer>
+
+    <ScrollToTop />
   </UMain>
 </template>

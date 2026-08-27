@@ -13,16 +13,16 @@ export default defineNuxtConfig({
     '@nuxtjs/sitemap'
   ],
 
-  site: {
-    url: 'https://nstcrystal.is-a.dev',
-    name: 'NSTCrystal'
-  },
-
   devtools: {
     enabled: true
   },
 
   css: ['~/assets/css/main.css'],
+
+  site: {
+    url: 'https://nstcrystal.is-a.dev',
+    name: 'NSTCrystal'
+  },
 
   content: {
     experimental: {

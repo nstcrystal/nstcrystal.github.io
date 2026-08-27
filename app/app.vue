@@ -22,8 +22,6 @@ useSeoMeta({
   titleTemplate: 'NSTCrystal - %s',
   twitterCard: 'summary_large_image'
 })
-
-
 </script>
 
 <template>
@@ -35,6 +33,5 @@ useSeoMeta({
         <NuxtPage />
       </UMain>
     </NuxtLayout>
-
   </UApp>
 </template>

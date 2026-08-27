@@ -37,4 +37,3 @@ useSeoMeta({
     <UToaster />
   </div>
 </template>
-

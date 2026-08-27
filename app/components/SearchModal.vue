@@ -18,13 +18,13 @@ const activeIndex = ref(0)
 
 // Query blog posts
 const { data: blogPosts } = await useLazyAsyncData('search-blogs', () =>
-  queryCollection('blog').order('date', 'DESC').all()
-, { server: false })
+  queryCollection('blog').order('date', 'DESC').all(),
+{ server: false })
 
 // Query projects
 const { data: projects } = await useLazyAsyncData('search-projects', () =>
-  queryCollection('projects').all()
-, { server: false })
+  queryCollection('projects').all(),
+{ server: false })
 
 // Build searchable items
 const allItems = computed<SearchResult[]>(() => {
@@ -233,7 +233,7 @@ defineShortcuts({
                 {{ groupName }}
               </p>
               <button
-                v-for="(item, idx) in items"
+                v-for="item in items"
                 :key="item.id"
                 class="flex items-center gap-3 w-full rounded-lg px-3 py-2.5 text-left transition-colors cursor-pointer"
                 :class="flatResults.indexOf(item) === activeIndex

@@ -29,4 +29,3 @@ const searchOpen = ref(false)
 
   <SearchModal v-model:open="searchOpen" />
 </template>
-
