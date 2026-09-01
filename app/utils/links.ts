@@ -21,9 +21,9 @@ export const navLinks: NavigationMenuItem[] = [
     icon: 'i-lucide-user',
     to: '/about'
   },
-  {
-    label: 'Contact',
-    icon: 'i-lucide-mail',
-    to: '/contact'
-  }
+  // {
+  //   label: 'Contact',
+  //   icon: 'i-lucide-mail',
+  //   to: '/contact'
+  // }
 ]
