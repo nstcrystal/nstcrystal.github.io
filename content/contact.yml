@@ -1,13 +1,16 @@
 seo:
   title: "Contact"
   description: "Liên hệ với tôi qua biểu mẫu bên dưới hoặc các kênh mạng xã hội. Tôi sẽ phản hồi sớm nhất có thể."
+
 title: Contact
 description: Bạn có câu hỏi, muốn hợp tác hoặc chỉ muốn trò chuyện? Hãy gửi tin nhắn cho tôi, tôi sẽ phản hồi sớm nhất có thể.
+
 links:
   - label: "Email me"
   - label: 'Follow on GitHub'
     to: https://github.com/nstcrystal
     color: "neutral"
+
 form:
   icon: "i-lucide-send"
   title: "Gửi tin nhắn cho tôi"

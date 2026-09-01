@@ -1,6 +1,7 @@
 seo:
   title: "Developer"
   description: "Chào mừng đến với trang web của tôi! Tôi là Võ Văn Duy, một sinh viên tại Huế - Việt Nam."
+
 title: "NSTCrystal - Developer"
 description: "Tôi tạo mã nguồn rõ ràng, hiệu quả và xây dựng trải nghiệm web hiện đại, biến ý tưởng thành sản phẩm thực tế."
 
@@ -10,6 +11,7 @@ hero:
     - label: "Contact with me"
       to: '/contact'
       color: "neutral"
+
   images:
     - src: /images/marquee/1.jpg
       alt: Random Image 1
@@ -43,6 +45,7 @@ hero:
 
 about:
   title: "About Me"
+
   description: |
     Tôi là một nhà phát triển đam mê xây dựng các ứng dụng web và giải quyết các vấn đề bằng code.
     Hành trình của tôi kết hợp trí tò mò với việc học tập nhất quán, biến các khái niệm thành các sản phẩm kỹ thuật số có mục đích và hữu dụng.
@@ -50,6 +53,7 @@ about:
 
 experience:
   title: Educations and Experience
+
   items:
     - position: "Học tại"
       date: "2024 - Hiện tại"
@@ -73,17 +77,12 @@ testimonials:
       avatar:
         src: '2giosangmitom.png'
   
-  # - quote: "Duy has a great ability to turn ideas into working software. He approaches each problem with both creativity and analytical rigor, delivering clean and maintainable code."
-  #   author:
-  #     name: 'GitHub'
-  #     description: 'github.com/nstcrystal'
-  #     avatar:
-  #       src: 'https://avatars.githubusercontent.com/u/148052951?v=4'
-
 
 faq:
   title: Frequently Asked Questions
+
   # description: Answers to common questions about my work and services.
+  
   categories:
     - title: About Me
       questions:

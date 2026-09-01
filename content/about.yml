@@ -1,8 +1,10 @@
 seo:
   title: "About"
   description: "Tìm hiểu thêm về hành trình trở thành lập trình viên của tôi, các kỹ năng chuyên môn và niềm đam mê xây dựng các sản phẩm trên nền tảng web."
+
 title: About Me
 description: Tìm hiểu thêm về hành trình của tôi với tư cách là một lập trình viên tại Huế - Việt Nam, cũng như kinh nghiệm và niềm đam mê của tôi trong việc xây dựng các ứng dụng web.
+
 content: |
   Xin chào, tôi là **Võ Văn Duy**, một `sinh viên` Công nghệ thông tin và là lập trình viên tại Huế - Việt Nam. Tôi phát triển các sản phẩm web và biến những ý tưởng thành các sản phẩm hoạt động hiệu quả. 
   Hành trình của tôi bắt đầu từ sự `tò mò` về cách thức hoạt động của các trang web và theo thời gian sự tò mò này đã phát triển thành niềm `đam mê` thực sự đối với lập trình. Kể từ đó, tôi không ngừng học hỏi và xây dựng các sản phẩm, tập trung chủ yếu vào hệ sinh thái **Vue.js/Nuxt**.
@@ -23,6 +25,7 @@ content: |
 
   Những lúc không lập trình, bạn có thể thấy tôi đang tìm hiểu các bài viết về công nghệ mới, thử nghiệm các thiết lập Linux hoặc chơi game.
   Cảm ơn bạn đã ghé thăm. Hãy thoải mái xem qua các [projects](/projects) hoặc ghé thăm [blog](/blog) của mình nhé!
+
 images:
   - src: /images/Thirty_seven_1.png
     alt: ""
