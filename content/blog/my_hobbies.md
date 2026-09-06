@@ -25,6 +25,11 @@ Tôi thường không chơi game nhiều nhưng lại biết được rất nhi�
 
 ![Reverse1999](/images/reverse1999.png)
 
+- **Strinova**
+
+![Strinova](/images/strinova.png)
+
+
 ## Manga
 
 Sưu tầm truyện tranh là sở thích từ rất lâu rồi của tôi, gu manga của tôi thì không có cố định. Có thể là `Fantasy`, `Slice of life`, `romance` ...
@@ -48,12 +53,20 @@ Tôi có xem nhiều bộ Anime, tiếp cận được nhiều thể loại hơn
 
 Đó là lý do đầu tiên giúp tôi tiếp cận với các rider. Khi tìm hiểu và xem thì `cốt truyện` của từng series rider lại chính là lý do lớn nhất khiến tôi yêu thích dòng phim này. 
 
-Bên cạnh đó các series Kamen Rider khác nhau đều có các sản phẩm đồ chơi khác nhau giúp người xem có thể sưu tầm những món đồ độc đáo này. Hiện tại tôi đã sưu tầm được 4 dòng sản phẩm của:
+Bên cạnh đó các series Kamen Rider khác nhau đều có các sản phẩm đồ chơi khác nhau giúp người xem có thể `sưu tầm` những món đồ độc đáo này. Hiện tại tôi đã sưu tầm được 4 dòng sản phẩm của:
 
 - **Kamen Rider Kabuto**
 - **Kamen Rider Decade**
 - **Kamen Rider Double**
 - **Kamen Rider Faiz**
+
+
+## Cosplay
+
+Thật ra thì lúc đầu tôi không có sở thích `Cosplay` đâu nhưng mà sau khi đi trải nghiệm rất nhiều Fes thì tôi đã có thử đến với hình thức giải trí này. 
+
+Đúng ra thì tôi chưa được gọi là Coser vì tôi chỉ mới có test đúng 1 nhân vật Game yêu thích của tôi là `Vertin` trong game `Reverse1999` mà tôi có liệt kê ở trên
+
 
 > Bài viết chủ yếu để chia sẽ những sở thích `cá nhân` của tôi, cảm ơn các bạn đã đọc hết. Tôi sẽ rất vui nếu bạn cũng có những điểm chung với tôi, bạn có thể gửi những điều bạn muốn chia sẽ với tôi ở trang [Contact](/contact) hoặc xem thêm các bài viết tại [Blog](/blog)
 
