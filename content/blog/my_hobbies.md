@@ -67,7 +67,9 @@ Thật ra thì lúc đầu tôi không có sở thích `Cosplay` đâu nhưng m�
 
 Đúng ra thì tôi chưa được gọi là Coser vì tôi chỉ mới có test đúng 1 nhân vật Game yêu thích của tôi là `Vertin` trong game `Reverse1999` mà tôi có liệt kê ở trên
 
-![Cosplay image](/images/cosplay.jpg)
+<!-- ![Cosplay image](/images/cosplay.jpg) -->
+
+<img src="/images/cosplay.jpg">
 
 > Bài viết chủ yếu để chia sẽ những sở thích `cá nhân` của tôi, cảm ơn các bạn đã đọc hết. Tôi sẽ rất vui nếu bạn cũng có những điểm chung với tôi, bạn có thể gửi những điều bạn muốn chia sẽ với tôi ở trang [Contact](/contact) hoặc xem thêm các bài viết tại [Blog](/blog)
 
