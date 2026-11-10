@@ -15,6 +15,12 @@ const { data: stats } = await useFetch<{
   query: { username: global.github?.username }
 })
 
+
+watchEffect(() => {
+  console.log('GitHub Stats:', stats.value)
+})
+
+
 const items = computed(() => [
   {
     icon: 'i-lucide-users',
